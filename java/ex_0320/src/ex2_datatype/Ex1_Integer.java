@@ -6,6 +6,8 @@ public class Ex1_Integer {
 		int var2 = 0206; // 8진수
 		int var3 = 365; // 10진수
 		int var4 = 0xb3; // 16진수
+		//0~9 A~F
+		
 		System.out.println("var1 : " + var1);
 		System.out.println("var2 : " + var2);
 		System.out.println("var3 : " + var3);
