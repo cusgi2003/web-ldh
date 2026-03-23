@@ -17,7 +17,7 @@ public class BooleanExample {
 		System.out.println("복사한 값 : " + copy);
 		
 		// boolean은 true / false 값만 올 수 있다
-		isOn false;
+		isOn = false;
 		System.out.println("전등 상태 바뀜 : " + isOn);
 	}
 }
