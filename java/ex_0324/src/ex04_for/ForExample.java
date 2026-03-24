@@ -18,5 +18,54 @@ public class ForExample {
 		for(i =5; i>=1; i--) {
 			System.out.println(i);
 		}
+		
+		System.out.println("===========================");
+		
+		int sum = 0;
+		for(i = 1; i <= 10; i++) {
+			sum += i;
+		}
+		System.out.println("1~10까지의 총합 : " + sum);
+		
+		System.out.println("===========================");
+		
+		// 1부터 10까지 3의 배수만 출력하는 for문 작성하기
+		for(i = 1; i <= 10; i++) {
+			if(i%3==0) {
+				System.out.print(i + " ");
+			}
+		}
+		System.out.println("\n===========================");
+		
+		// 1부터 20까지 홀수만 출력
+		for(i = 1; i <= 20; i++) {
+			if(i%2 != 0) {
+				System.out.print(i + " ");
+			}
+		}
+		System.out.println("\n===========================");
+		
+		// 정수형 변수를 하나 초기화 한다
+		// 해당 정수에 해당하는 구구단 출력하기
+		int x = 3;
+		for(i = 1; i < 10; i++) {
+			System.out.println(x + " * " +  i + " = " + x*i);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
