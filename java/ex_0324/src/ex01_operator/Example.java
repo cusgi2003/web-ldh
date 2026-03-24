@@ -84,8 +84,8 @@ public class Example {
 		System.out.println("총 점 : " + sum);
 		System.out.println("평균점수 : " + avg);
 		
-		String succes = (kr >= 60 && en >= 60 && math >= 60) && 
+		String success = (kr >= 60 && en >= 60 && math >= 60) && 
 				avg >= 60 ? "합격" : "불합격";
-		System.out.println("결과는 " + succes + "입니다.");
+		System.out.println("결과는 " + success + "입니다.");
 	}
 }
