@@ -16,6 +16,7 @@ public class SwitchExample {
 				break;
 			default:
 				System.out.println("일치하는 조건값이 없습니다");
+				break;
 		}
 		
 		char ch = 'B';
@@ -33,5 +34,22 @@ public class SwitchExample {
 		}
 		
 		// 실수 타입은 비교값으로 작성할 수 없다
+		String s = "홍";
+		
+		switch(s) {
+		case "김":
+			System.out.println("김길동");
+			break;
+		case "이":
+			System.out.println("이길동");
+			break;
+		case "박":
+			System.out.println("박길동");
+			break;
+		default :
+			System.out.println("일치하는 이름이 없음");
+			break;
+		}
+		
 	}
 }
