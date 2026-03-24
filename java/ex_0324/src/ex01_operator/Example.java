@@ -33,11 +33,12 @@ public class Example {
 		length = sc.nextInt();
 		
 		int area = width * length;
-		int perimeter = width*2 + length*2;
+		int perimeter = (width + length) * 2;
 		
 		System.out.printf("넓이의 값 : %d", area);
 		System.out.printf("둘레의 값 : %d", perimeter);
 		
+		System.out.println();
 		// ===============================
 		
 		// 학생은 하루에 일정한 금액의 용돈을 받는다
@@ -46,16 +47,45 @@ public class Example {
 		// 총 받은 용돈에서 사용한 금액(used)을 뺀 남은 돈을 
 		// 출력하는 코드 작성하기
 		
-		System.out.print("용돈 : \n");
+		System.out.print("용돈 : ");
 		int money = sc.nextInt();
 		
-		System.out.print("날짜 : \n");
+		System.out.print(", 날짜 : ");
 		int day = sc.nextInt();
 		
-		System.out.print("사용한 금액 : \n");
+		System.out.print(", 사용한 금액 : ");
 		int used = sc.nextInt();
+		System.out.println();
 		
-		int result4 = money*day - used;
+		int result4 = money * day - used;
 		System.out.printf("총 남은 금액 : %d", result4);
+		
+		System.out.println();
+		// ===============================
+		
+		// 국어, 영어, 수학에 대한 점수를 입력
+		// 1. 세 과목에 대한 합계 출력하기
+		// 2. 평균 출력하기
+		// 3. 세 과목의 점수가 각각 60점이상이고, 평균이 60점 이상일 떄 합격
+		
+		float kr;
+		float en;
+		float math;
+		
+		System.out.println("국어의 점수 : ");
+		kr = sc.nextFloat();
+		System.out.println("영어의 점수 : ");
+		en = sc.nextFloat();
+		System.out.println("수학의 점수 : ");
+		math = sc.nextFloat();
+		
+		float sum = kr + en + math;
+		float avg = sum/3;
+		System.out.println("총 점 : " + sum);
+		System.out.println("평균점수 : " + avg);
+		
+		String succes = (kr >= 60 && en >= 60 && math >= 60) && 
+				avg >= 60 ? "합격" : "불합격";
+		System.out.println("결과는 " + succes + "입니다.");
 	}
 }
