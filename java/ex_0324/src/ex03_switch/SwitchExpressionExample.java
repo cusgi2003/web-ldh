@@ -1,5 +1,7 @@
 package ex03_switch;
 
+import java.util.Scanner;
+
 public class SwitchExpressionExample {
 	public static void main(String[] args) {
 		// break를 뺴먹으면 fall-throgh가 발생한다
@@ -74,5 +76,39 @@ public class SwitchExpressionExample {
 		default -> "잘못된 입력입니다.";
 		};
 		System.out.println(resultMonth);
+		
+		// 계산기 만들기
+		// 두 개의 정수형 변수를 키보드에 받는다
+		// 연산자 기호를 담아줄 문자열 변수를 만든다
+		// switch문을 이용하여 정수의 연산을 수행하는 코드 작성
+		// 10 
+		// 7
+		// *
+		// 10 * 7 = 70
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("첫 번째 숫자 입력 : ");
+		int first_int = sc.nextInt();
+		System.out.print("두 번째 숫자 입력 : ");
+		int second_int = sc.nextInt();
+		
+		System.out.print("연산 기호 입력 ( +, -, *, / ) : ");
+		String calc = sc.next();	
+		String resultCalc = switch(calc) {
+		case "+" -> first_int + " + " + second_int + " = " + (first_int + second_int);
+		case "-" -> first_int + " - " + second_int + " = " + (first_int - second_int);
+		case "*" -> first_int + " * " + second_int + " = " + (first_int * second_int);
+		case "/" -> first_int + " / " + second_int + " = " + (first_int / second_int);
+		default  -> "잘못된 값 입력";
+		};
+		System.out.println(resultCalc);
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
