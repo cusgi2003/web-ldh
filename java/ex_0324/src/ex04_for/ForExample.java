@@ -1,5 +1,7 @@
 package ex04_for;
 
+import java.util.Scanner;
+
 public class ForExample {
 	public static void main(String[] args) {
 		// 지역 변수 : 특정 영역 내에서 만들어진 변수는 해당 영역 내에서만 사용할 수 있다.
@@ -51,6 +53,23 @@ public class ForExample {
 		for(i = 1; i < 10; i++) {
 			System.out.println(x + " * " +  i + " = " + x*i);
 		}
+		System.out.println("\n===========================");
+		
+		// 정수 하나를 입력받고
+		// 1부터 입력받은 정수까지의 총 합 구하기
+		// Ex) input : 5 -> 1 ~ 5까지의 총합인 15를 출력
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+		System.out.println();
+		int inputSum = 0;
+		
+		for(i=1; i <= input; i++) {
+			inputSum += i;
+		}
+		System.out.println("입력받은 수 : "+ input + ", 합계 : "+inputSum);
 		
 		
 		
