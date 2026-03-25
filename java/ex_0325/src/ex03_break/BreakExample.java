@@ -27,27 +27,31 @@ public class BreakExample {
 		// 크면 "down"
 		// 10번만에 못맞추면 정답을 맞추지 못했습니다
 		
-		System.out.println("정답 : " + rand);
+		System.out.println("===================");
+		System.out.println("updown 정답 : " + rand);
 		
 		
 		int chance = 10;
+		int count = 0;
 		for(int i = 1; i<=10; i++) {
 			
-			System.out.print("숫자 맞추기 / 숫자 입력 :");
+			System.out.print("숫자 맞추기 / 숫자 입력 : ");
 			int chooise = sc.nextInt();
-			
+			count++;
 			if(chooise > rand) {
 				System.out.println("down");
 			} else if(chooise < rand) {
 				System.out.println("up");
 			} else if(chooise == rand) {
 				System.out.println("정답입니다");
+				System.out.printf("%d번째 만에 맞추셨습니다\n", count);
 				break;
 			} else if(i == 10) {
 				System.out.println("정답을 맞추지 못했습니다");
-				break;
 			}
 		}
+		
+		System.out.println("===================");
 		
 		
 		
