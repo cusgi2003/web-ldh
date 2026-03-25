@@ -42,14 +42,17 @@ public class ArrayExample {
 		
 		
 		int[] iAr = {1,2,3,4,5,6,7,8,9,10};
-		
+		int sum = 0;
 		// 배열 iAr에 들어있는 모든 요소의 합을 구하세요
 		
 		 for(int i = 0; i < iAr.length; i++) {
-			 int sum = 0;
 			 sum += iAr[i];
 		 }
 		
+		 System.out.println("합계 : " + sum);
+		 
+		 System.out.println();
+		 System.out.println("===============");
 		
 		//	1. 문자열의 불변의 법칙
 		//	2. String을 이용한 문제 1개 출제하기
