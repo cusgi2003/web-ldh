@@ -1,6 +1,7 @@
 package ex06_string;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class StringExample {
 	public static void main(String[] args) {
@@ -99,6 +100,26 @@ public class StringExample {
 		}
 		System.out.println("소문자 a의 개수 : " + count + "개");
 		
+		Scanner sc = new Scanner(System.in);
+		
+		// 문자열ㅇ르 입력받고 그 문자열을 뒤집어서 원본과 같으면
+		// "같습니다", 다르면 "다릅니다" 출력
+		
+		System.out.println("원본 : ");
+		String original = sc.next();	// abc 
+		String reverse = "";
+		
+		for(int i= original.length() -1; i >= 0; i--) {
+			reverse += original.charAt(i);
+		}
+		
+		if (original.equals(reverse)) {
+		    System.out.println("같습니다");
+		} else {
+		    System.out.println("다릅니다");
+		}
+		
+		System.out.println("===================");
 		
 		
 		
