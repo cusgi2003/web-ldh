@@ -1,5 +1,7 @@
 package ex06_string;
 
+import java.util.Arrays;
+
 public class StringExample {
 	public static void main(String[] args) {
 		// String
@@ -62,7 +64,40 @@ public class StringExample {
 		String str = "동해물과 백두산이 마르고 닳도록";
 		System.out.println(str.substring(2,9));
 		
+		// 위치 찾기 
+		// indexOf("문자열");
+		int index = subject.indexOf("프로그래밍");
+		System.out.println(index);
 		
+		index = subject.indexOf("안녕하세요");
+		System.out.println(index);
+		
+		// 문자열을 분리
+		// split("기준값")
+		String board = "번호, 제목, 내용, 성명";
+		System.out.println(board.split(","));
+		// 분리한 문자열을 배열로 반환
+		String[] arr = board.split(",");
+		System.out.println(Arrays.toString(arr));
+		
+		// 특정 문자열을 포함하고 있는지에 대한 여부 (true/false)
+		// contains("문자열")
+		
+		System.out.println("포함 여부 : " + subject.contains("자바"));
+		
+		
+		
+		// 키보드에서 알파벳을 무작위로 입력받는다
+		// 입력받은 문자열에서 소문자 a가 몇개있는지 판별하는 코드 작성하기
+		int count = 0;
+		String alpha = "adaiAdia";
+		
+		for(int i=0; i < alpha.length(); i++) {
+			if(alpha.charAt(i) == 'a') {
+				count++;
+			}
+		}
+		System.out.println("소문자 a의 개수 : " + count + "개");
 		
 		
 		
