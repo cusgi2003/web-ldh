@@ -38,9 +38,22 @@ public class ArrayExample {
 		}
 		
 		
+		System.out.println("===============");
 		
 		
+		int[] iAr = {1,2,3,4,5,6,7,8,9,10};
 		
+		// 배열 iAr에 들어있는 모든 요소의 합을 구하세요
+		
+		 for(int i = 0; i < iAr.length; i++) {
+			 int sum = 0;
+			 sum += iAr[i];
+		 }
+		
+		
+		//	1. 문자열의 불변의 법칙
+		//	2. String을 이용한 문제 1개 출제하기
+		//		ㄴ 배우지 않은 메서드를 사용해도 괜찮음
 		
 		
 		
