@@ -42,25 +42,14 @@ public class DoWhilleExample {
 		// 입력받은 수를 뒤집어서 출력하기
 		// 1234 -> 4321
 		
-		int number;
-		String inputData;
-		do {
-			System.out.print("정수 입력 : ");
-			number = sc.nextInt();
-			
-			if(number != 0) {
-				int temp = number;
-				int reversed = 0;
-				
-				while(temp != 0) {
-					int digit = temp % 10;
-					reversed = reversed * 10 + digit;
-					temp /= 10;
-				}
-				System.out.println("결과 : " + reversed);
-			}
-			
-		} while(number != 0);
+		System.out.print("정수 입력 : ");
+		int original = sc.nextInt();
+		int reversed = 0;
+		do {	
+			reversed = reversed * 10 + original % 10;
+			original /= 10;
+		} while(original != 0);
+		System.out.println("결과 : " + reversed);	
 		
 		
 		
