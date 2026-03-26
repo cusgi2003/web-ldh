@@ -33,4 +33,5 @@ System.out.println("Hello, Java);
 ```c
 printf("%d", 100);
 ```
+---
 
