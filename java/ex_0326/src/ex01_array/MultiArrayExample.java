@@ -1,5 +1,7 @@
 package ex01_array;
 
+import java.util.Scanner;
+
 public class MultiArrayExample {
 	public static void main(String[] args) {
 		// 2차원 배열 : 1차원 배열을 요소로 갖는 배열
@@ -58,8 +60,50 @@ public class MultiArrayExample {
 		System.out.println(numSum);
 		
 		
+		// 학생들의 수학과 영어성적을 등록하는 프로그램이 있다
+		// 프로그램을 실행하면 몇명의 정보를 저장할 것인지를 입력한 후,
+		// 입력받은 수 만큼 학생들의 이름과 수학, 영어 성적을 입력받는
+		// 프로그램 작성하기
 		
+		// Ex
+		// 등록할 인원 수 : 2
+		// 이름 : 홍길동
+		// 수학 : 90
+		// 영어 : 87
+		// -------------
+		// 이름 : 독고길동
+		// 수학 : 70
+		// 영어 : 100
 		
+		// 2명 입력 완료
+		// 홍길동 9087
+		// 독고길동 70 100
+		
+		System.out.println("등록할 인원 수 : ");
+		Scanner sc = new Scanner(System.in);
+		int person = sc.nextInt();
+		
+		String[][] student = new String[person][3];
+		
+		for(int i = 0; i < student.length; i++) {
+			
+			System.out.println("이름을 입력하세요 :");
+			student[i][0] = sc.next();
+			
+			System.out.println("수학 점수 입력 : ");
+			student[i][1] = sc.next();
+				
+			System.out.println("영어 점수 입력 : ");
+			student[i][2] = sc.next();		
+		}
+		System.out.println(person + "명 입력 완료");
+		
+		for(int i = 0; i < student.length; i++) {
+			for(int j = 0; j < student[i].length; j++) {
+				System.out.print(student[i][j] + "");
+			}
+			System.out.println();
+		}
 		
 		
 		
