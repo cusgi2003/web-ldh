@@ -63,9 +63,11 @@ public class ArrayExample {
 		// 1 ~ 45 사이의 난수를 발생시켜 로또번호 6자리를 만드는 코드 작성하기
 		
 		int[] lotto = new int[6];
-		for(int i = 0; i < 6; i++) {
+		
+		for(int i = 0; i < lotto.length; i++) {
 			lotto[i] = (int)(Math.random()*45) + 1;
 			System.out.println(Arrays.toString(lotto));
+			
 			for(int j = 0; j < i; j++) {
 				if(lotto[i] == lotto[j]) {
 					i--;
