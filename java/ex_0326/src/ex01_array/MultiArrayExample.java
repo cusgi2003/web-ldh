@@ -100,10 +100,26 @@ public class MultiArrayExample {
 		
 		for(int i = 0; i < student.length; i++) {
 			for(int j = 0; j < student[i].length; j++) {
-				System.out.print(student[i][j] + "");
+				System.out.print(student[i][j] + " ");
 			}
 			System.out.println();
 		}
+		
+		int[] scores = {95, 71, 84, 93, 87};
+		int sum = 0;
+		
+		for(int score : scores) {
+			sum += score;
+		}
+		System.out.println("총합 : " + sum);
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
