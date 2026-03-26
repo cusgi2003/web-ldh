@@ -7,6 +7,15 @@ public class Car {
 	int price;
 	String color;
 	String brand;
+
+	public Car() {
+		
+	}
+	
 	
 	
 }
+// 하나의 파일에서 여러개의 클래스를 정의하는 것도 가능하다
+class Truck {}
+
+class BUS{}
