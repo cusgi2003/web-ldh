@@ -17,7 +17,6 @@ public class MultiArrayExample {
 		
 		// arr.length : 2차원 배열의 길이
 		// arr[i].lenghth : 해당 1차원 배열의 길이
-		
 		for(int i = 0; i < arr.length; i++){
 			for(int j = 0; j < arr[i].length; j++) {
 				System.out.println(arr[i][j]);
@@ -48,6 +47,7 @@ public class MultiArrayExample {
 		
 		// 다음 2차원 배열의 모든 요소의 총 합을 구하세요
 		int[][] num = {{1}, {2,3}, {4,5,6}, {7,8,9,10}};
+		
 		int numSum = 0;
 		
 		for(int i = 0; i < num.length; i++) {
