@@ -14,5 +14,8 @@ public class Main {
 		System.out.println(result2);
 		
 		cal.area(5, 2);
+		
+		int result3 = cal.area(5);
+		System.out.println(result3);
 	}
 }
