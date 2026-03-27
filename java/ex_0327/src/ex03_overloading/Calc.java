@@ -15,6 +15,7 @@ public class Calc {
 	
 	// 오버로딩해서 정사각형의 넓이를 구하는 메서드 만들기
 	// 길이는 매개변수로 받는다
+	// 넓이는 반환받는다
 	public int area(int length) {
 		return length*length;
 	}
@@ -22,7 +23,5 @@ public class Calc {
 	public double area(double length) {
 		return length*length;
 	}
-	
-	
 	
 }
