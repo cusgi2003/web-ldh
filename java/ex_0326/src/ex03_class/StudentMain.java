@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class StudentMain {
 	public static void main(String[] args) {
-		Student student1 = new Student("이동현", 23, 85);
+		Student student1 = new Student();
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -16,6 +16,6 @@ public class StudentMain {
 		System.out.println("성적을 입력 하세요");
 		int score = sc.nextInt();
 		
-		Student inputStudent = new Student(name, age, score);
+//		Student inputStudent = new Student(name, age, score);s
 	}
 }
