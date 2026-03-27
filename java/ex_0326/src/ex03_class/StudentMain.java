@@ -17,8 +17,5 @@ public class StudentMain {
 		int score = sc.nextInt();
 		
 		Student inputStudent = new Student(name, age, score);
-		
-		String[][] strStudent = new String[3][];
-		for
 	}
 }
