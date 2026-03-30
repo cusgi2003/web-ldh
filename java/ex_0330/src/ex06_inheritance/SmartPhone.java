@@ -2,8 +2,15 @@ package ex06_inheritance;
 
 // 상속을 받는 쪽이 상속을 하는 쪽을 선택한다
 // extends 키워드를 통해상속받을 클래스를 선택한다
+
+// 상속받는 클래스 ( 자식클래스, 파생클래스 )
 public class SmartPhone extends Phone{
 	public boolean wifi;
+	
+	public SmartPhone(String model, String color) {
+		super(model, color);
+	}
+	
 	
 	public void setWifi(boolean wifi) {
 		this.wifi = wifi;
