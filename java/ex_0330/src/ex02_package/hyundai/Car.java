@@ -1,4 +1,7 @@
-package hyundai;
+package ex02_package.hyundai;
+
+// import의 역할
+// 긴 이름을 줄여서 쓰기 위한 문법
 
 import ex02_package.hankook.SnowTire;
 import ex02_package.kumho.AllSeasonTire;
