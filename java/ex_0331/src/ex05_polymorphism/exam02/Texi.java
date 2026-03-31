@@ -1,0 +1,8 @@
+package ex05_polymorphism.exam02;
+
+public class Texi extends Vehicle{
+	@Override
+	public void run() {
+		System.out.println("택시가 달린다");
+	}
+}
