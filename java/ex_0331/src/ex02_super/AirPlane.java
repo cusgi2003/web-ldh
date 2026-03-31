@@ -1,6 +1,6 @@
 package ex02_super;
 
-public class Airplane {
+public class AirPlane {
 	// "착륙합니다" 라고 출력하는 land() 메서드
 	// "일반 비행합니다" 라고 출력하는 fly()
 	// "이륙합니다 takeOff()
