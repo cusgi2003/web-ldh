@@ -36,5 +36,6 @@ public class TypeCastingExample {
 		a2.sound();
 		
 		// 부모타입의 배열에 서로 다른 자식 객체를 넣을 수 있다는 장점이 있다
+		Animal[] array = {new Dog(), new Cat()};
 	}
 }
