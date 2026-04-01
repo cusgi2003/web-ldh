@@ -23,5 +23,18 @@ public class Main {
 		rc.setMute(false);
 		
 		RemoteControl.changeBattery();
+		
+		rc = new SmartTelevision();
+		
+		rc.turnOn();
+		// 해당 인터페이스에서 구현한 메서드만 사용이 가능하다
+//		rc.search("https://www.youtube.com");
+		
+		SearchAble searchAble = new SmartTelevision();
+		searchAble.search("https://www.youtube.com");
+		
+		SmartTelevision st = new SmartTelevision();
+		st.turnOn();
+		st.search("aa");
 	}
 }
