@@ -10,7 +10,7 @@ public class Main {
 		a.method();
 		
 //		B b = new B();	module_a 에서 module 파일을 수정하면 에러가 남
-//		b.method();
+//		b.method();		-> 패키지 은닉
 		
 		C c = new C();
 		c.method();
