@@ -1,0 +1,10 @@
+package ex01_exception.service;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		OrderService or = new OrderService();
+	}
+}
