@@ -2,9 +2,10 @@ package ex02_object;
 
 public class Member {
 	String id;
-	
-	public Member(String id) {
+	String name;
+	public Member(String id, String name) {
 		this.id = id;
+		this.name = name
 	}
 	
 	// instanceof 연산자 : 왼쪽에 있는 객체가 오른쪽 타입인지 검사
