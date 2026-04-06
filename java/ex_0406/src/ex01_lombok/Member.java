@@ -1,16 +1,21 @@
 package ex01_lombok;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 // 어노테이션
 // 자바코드에 붙이는 표식
 // 컴파일러에게 "이 코드에는 어떤 의미가 있다" 라고 알려주는 정도
 
-@Setter @Getter
+//@Setter @Getter
+//@ToString
+@Data // Getter, Setter, hashCode(), equals(), toString() 메서드 자동 생성
+
 //@NoArgsConstructor	//기본 생성자
 @AllArgsConstructor	// 모든 필드를 매개변수로 갖는 생성자
 @RequiredArgsConstructor // final 또는 @NonNull 이 붙은 필드만 매개변수로 갖는 생성자
