@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 public class StringTokenizerExample {
 	public static void main(String[] args) {
 		String data1 = "홍길동&박깅동,이길동";
+		// split()으로 분리하게 되면 불필요한 배열이 만들어지게 된다
 		String[] arr1 = data1.split("&|,");
 		System.out.println(Arrays.toString(arr1));
 		
