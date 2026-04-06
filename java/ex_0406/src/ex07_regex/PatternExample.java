@@ -41,5 +41,23 @@ public class PatternExample {
 		regExp = "[0-9]+";
 		System.out.println(str.matches(regExp));
 		
+		// 아이디 형식검사
+		// 영어 소문자로 시작
+		// 영어 소문자 + 숫자만 허용
+		// 5 ~ 12자
+		str = "e23s1";
+		regExp = "[a-z][a-z0-9]{4,11}";
+		System.out.println(str.matches(regExp));
+		
+		// 이메일 형식 검사
+		// 아이디 부분 : 영문, 숫자, _
+		// 도메인 포함
+		// 예시 : test01@gmail.com
+		
+		str = "test01@gmail.com";
+		regExp = "[a-zA-Z0-9_]+@[a-z]+.(com|net|ai)";
+		
+		System.out.println(str.matches(regExp));
+		
 	}
 }
