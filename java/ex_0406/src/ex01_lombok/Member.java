@@ -1,16 +1,23 @@
 package ex01_lombok;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
+// 어노테이션
+// 자바코드에 붙이는 표식
+// 컴파일러에게 "이 코드에는 어떤 의미가 있다" 라고 알려주는 정도
+
+@Setter @Getter
+//@NoArgsConstructor	//기본 생성자
+@AllArgsConstructor	// 모든 필드를 매개변수로 갖는 생성자
+@RequiredArgsConstructor // final 또는 @NonNull 이 붙은 필드만 매개변수로 갖는 생성자
 public class Member {
 
-	private String id;
+	private final String id;
 	private String name;
 	private int age;
 	
-	// 1. 생성자를 이용하여 초기화하기
-	public Member(String id, String name, int age) {
-		this.id = id;
-		this.name = name;
-		this.age = age;
-	}
 }
