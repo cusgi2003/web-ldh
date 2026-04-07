@@ -59,5 +59,24 @@ public class PatternExample {
 		
 		System.out.println(str.matches(regExp));
 		
+		String[] arr = {"123", "abc", "4567"};
+		regExp = "[0-9]+";
+		for (String s: arr) {
+			if(s.matches(regExp)) {
+				System.out.println(s);
+			}
+		}
+		
+		
+		String[] arr2 = {"홍길동", "Tom", "김철수", "a1", "김이박길동"};
+		// 한글만, 2~5글자
+		regExp = "[가-힇]{2,5}";
+		
+		for(String s : arr2) {
+			if (s.matches(regExp)) {
+				System.out.println(s);
+				
+			}
+		}
 	}
 }
