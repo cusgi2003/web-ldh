@@ -1,0 +1,120 @@
+Object : 모든 클래스의 최상위 클래스
+
+	toString()
+	equals()
+
+System클래스 : 출력, 입력과 관련된 클래스
+
+	in
+	err
+	out
+	exit() 프로그램을 종료시키는 메서드
+	currentTimeMillis()
+	nanoTime()
+
+
+운영체제의 속성 읽기
+
+	운영체제 이름, 사용자명, 사용자 폴더, 자바 버전
+
+
+String
+	
+	수정되지 않는다는 규칙떄문에 자주 변경하면 
+	메모리에 버려진 문자열들이 많아짐
+
+
+StringBulider
+
+	버퍼(buffer) : 데이터를 한 번에 처리하지 않고 임시로 저장하는 공간
+	모아서 한 번에 처리한다
+	입출력하는 것은 메모리를 많이 잡아먹기 때문에 속도가 더 빠르다
+
+
+수정이 일어나면 기존의 객체를 수정한다
+
+	appen() : 맨 뒤에 추가
+	insert() : 내가 원하는 위치에 추가
+	delete() : 내가 원하는 만큼 삭제
+	reverse() : 문자열 뒤집기
+
+
+StringTokenizer 
+
+	구분자가 1개라면 문자열을 잘라서 가지고 있는 것
+
+
+hasMoreTokens() : 남아있는지 문자열의 여부
+
+
+포장클래스(wrapper)
+
+	기본타입의 클래스
+
+	Integer
+	Character
+	Byte
+	Long
+	Float
+	Double
+	Boolean
+
+
+Math 클래스
+
+	필드, 메서드가 거의 static으로 구성되어 있기 때문에 따로 객체 생성을 안해도 된다
+
+	abs() : 절대값
+	ceil() : 올림
+	floor() : 내림
+	round() : 반올림
+	max(x,y) : 최대값(2개씩만 비교할 수 있음)
+	min() : 최소값
+	random() : 랜덤값
+
+
+LocalDateTime() 
+
+	날짜와 시간을 읽고 조작하기 위해 사용
+	시간을 관리하는 자료형
+	객체를 직접 만들지는 않음
+
+LocalDateTIme.now() 
+
+	현재 날짜와 시간을 반환
+
+of(년,월,일,시,분) : 특정 날짜 생성
+
+
+withYear()
+withHour() : 날짜나 시간을 수정하는 것도 가능하다
+
+isBefore()
+isAfter()
+isEquals()
+
+
+LocalDate : 날짜만
+LocalTime : 시간만
+
+
+정규표현식(Regulaer Expression)
+
+	문자열의 패턴을 정의하는 규칙
+	특정 문자열이 내가 원하는 방향으로 적혀있는지 확인
+
+	a-z : 소문자
+	A-Z : 대문자
+	0-9 : 0부터 9까지
+	
+	? : 없거나 1개
+	+ : 한개거나 그 이상
+	[] : 안에 적힌 것 중 한개
+
+
+	
+
+
+
+
+
