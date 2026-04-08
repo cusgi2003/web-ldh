@@ -80,28 +80,3 @@ Class 클래스의 역할
 	}
 
 	Box<List<String>> box =  new Box<>();
-
-
-Member클래스
-	private String name
-	private int age
-	
-	생성자로 이름과 나이 초기화
-
-	MemberResponse 제네릭 클래스
-	boolean success
-	String message
-	T data
-
-	생성자로 필드 초기화
-
-	isSuccess()
-	getMessage()
-	getData()
-
-	Main에서 아래 데이터를 사용해 객체 생성 & 출력
-	성공여부 : 
-	메세지 : 회원 조회 성공
-	이름 : 
-	나이 : 
-	
