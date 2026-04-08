@@ -8,6 +8,10 @@ import java.util.Properties;
 
 // 로그를 출력하는 프로그램을 만들되, 로그 출력방식은 코드가 아니라 설정 파일에 따라서
 // 바뀌게 만들기 하기 위함
+
+// 개발중에는 콘솔에 출력
+// 운영 환경에서는 파일에 저장
+// 어떤 시스템에서는 DB에 저장
 public class LoggerFactory {
 
 	public static Logger getLogger() {
