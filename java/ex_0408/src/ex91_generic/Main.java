@@ -23,7 +23,12 @@ public class Main {
 		tvManager.powerOn();
 		audioDeviceManager.powerOn();
 		
+		
+		// Readable & Closeable을 동시에 구현한 클래스만 타입 할당이 가능하다
 		Box<BoxType>box = new Box<>();
+		
+		
+//		Box<Object> box2 = new Box<>();
 		
 		
 	}
