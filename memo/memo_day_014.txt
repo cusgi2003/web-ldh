@@ -21,3 +21,87 @@ Car car = new Car() : 컴파일 시점에 클래스 확정
 
 	프로그램이 실행되면서 남기는 기록
 	
+
+Class 클래스의 역할
+
+	클래스의 정보를 알아와야 할 때
+	생성자를 읽어서 객체를 만드는 것
+	ㄴ 프로그램이 실행되는 시점
+
+	핵심
+		컴파일 시점에 확인하는 것이 아니라 실행시점에서
+		확인하기 위함이다
+
+
+어노테이션
+
+	코드에 붙이는 표식같은 것
+	클래스, 필드, 메서드 등에 붙여서 코드에 대한 
+	추가 정보를 전달할 때 사용
+
+	코드 자체의 실행문은 아니지만 이 코드가 어떤 의미인지,
+	컴파일러가 무엇을 확인해야 하는지, 프레임워크가 어떻게
+	처리해야 하는지와 같은 정보를 알려주는 역할
+
+	1. 실수를 줄여준다
+	2. 코드의 의미를 더 분명하게 보여준다
+
+	자바가 제공하는 어노테이션
+		@Override
+		@Dreprecated : 더이상 업데이트 안되니 그만 써 
+		@SupressWarnings : 경고 보기 싫을 때
+
+	메타 어노테이션
+		@Retention : 언제까지 정보를 유지할거냐
+		@Target : 어디에 적용할거냐
+
+	나만의 어노테이션
+		public @Interface 어노테이션명{}
+
+
+제네릭
+	
+	타입을 미리 고정하지 않고 나중에 정할 수 있게 만드는 문법
+	어떤 타입이든 담을 수 있는 틀을 만든 뒤 사용할 때 타입을 정하는 방식
+
+
+중첩 제네릭
+
+	제네릭 타입 안에 또 달느 제네릭 타입이 들어간 구조
+	Box<Pair<String,Integer>>
+
+	복잡한 구조의 표현
+	Board<article<Integer, Integer>>
+
+	코드 가독성과 유지보수에 유리
+
+	Class Box<T> {
+		T item;
+	}
+
+	Box<List<String>> box =  new Box<>();
+
+
+Member클래스
+	private String name
+	private int age
+	
+	생성자로 이름과 나이 초기화
+
+	MemberResponse 제네릭 클래스
+	boolean success
+	String message
+	T data
+
+	생성자로 필드 초기화
+
+	isSuccess()
+	getMessage()
+	getData()
+
+	Main에서 아래 데이터를 사용해 객체 생성 & 출력
+	성공여부 : 
+	메세지 : 회원 조회 성공
+	이름 : 
+	나이 : 
+	
