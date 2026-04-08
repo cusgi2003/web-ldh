@@ -1,5 +1,9 @@
 package ex91_generic;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 	public static void main(String[] args) {
 		// 제네릭에 타입을 넣을 수 있는 것은 좋은데
@@ -29,7 +33,28 @@ public class Main {
 		
 		
 //		Box<Object> box2 = new Box<>();
+		List<Dog> dogs = new ArrayList<Dog>();
+		List<Cat> Cats = new ArrayList<Cat>();
+		AnimalPrint ap = new AnimalPrint();
+		ap.printAnimals(dogs);
+		ap.printAnimals(Cats);
 		
+		
+		List<Integer> a = Arrays.asList(1,2,3,4,5);
+		List<Double> b = Arrays.asList(1.2, 2.2, 3.4, 4.4, 5.5);
+		System.out.println(sum(a));
+		System.out.println(sum(b));
 		
 	}
+
+	// 숫자타입의 list를 받아서 총합을 구하는 sum메서드 만들기 반환타입은 double
+	
+	public static double sum(List<? extends Number> list) {
+		double result = 0;
+		for(Number e : list) {
+			result += e.doubleValue();
+		}
+		return result;
+	}
+	
 }
