@@ -45,7 +45,39 @@ public class ArrayListExample {
 		// 연속되지 않는 인덱스에 값을 넣으려고 하면
 		// ArrayIndexOutOfBoundException 발생
 		
+		// --------------------------------
 		
+		// 정수 타입을 담을 수 있는 List객체
+		// 변수명 list2
+		
+		List<Integer> list2 = new ArrayList<Integer>();
+		
+		// 2부터 짝수 데이터 10개 추가하기
+		for(int i = 0; i < 10; i++) {
+			if(list2.size() < 10) {
+				list2.add(2*(1+i));
+			}
+		}
+		System.out.println(list2);
+		
+		// 3번 인덱스의 내용을 삭제
+		int delNum = list2.remove(3);		
+		System.out.println("삭제된 숫자 : " + delNum);
+		
+		// 데이터를 직접 지우고 싶음
+		// 숫자타입의 데이터는 객체화 후 삭제
+		
+		list2.remove(Integer.valueOf(10));
+		
+		System.out.println("데이터 10 삭제 : " + list2);
+		
+		// list2에 들어있는 모든 10을 삭제하기
+		for(int i = 0; i < list2.size(); i++) {
+			if(list2.get(i) == 10) {
+				list.remove(Integer.valueOf(i));
+			}
+		}
+		System.out.println(list2);
 		
 		
 		
