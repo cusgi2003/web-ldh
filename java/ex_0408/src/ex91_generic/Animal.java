@@ -8,8 +8,6 @@ class Cat extends Animal{
 	
 }
 
-
-
 public class Animal {
 
 }
