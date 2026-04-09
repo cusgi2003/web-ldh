@@ -6,6 +6,8 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
+		Cart cart = new Cart();
+		
 		while (true) {
 		            System.out.println("\n===== 장바구니 메뉴 =====");
 		            System.out.println("1. 상품 추가");
@@ -27,6 +29,11 @@ public class Main {
 		            	
 		            	System.out.print("수량 : ");
 		            	int quantity = sc.nextInt();
+		            	
+		            	cart.addProduct(name, price, quantity);
+		            } else if(choice == 0) {
+		            	System.out.println("프로그램 종료");
+		            	break;
 		            }
 		}
 	}
