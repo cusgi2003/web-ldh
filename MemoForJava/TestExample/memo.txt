@@ -38,26 +38,3 @@
 
 메서드의 정의와 구성요소
 
-
-
-
-클래스 설계 / 객체
-  필드, 생성자, 메서드
-
-  Class Car{
-    // 1. 필드
-    String model;
-
-    // 2. 생성자
-    public Car(String model){
-        this.model = model;
-    }
-
-    // 3. 메서드
-    void drive() {
-        System.out.println(model + "이(가) 달립니다.");
-    }
-
-    // 객체 생성
-    Car myCar = new Car("소나타");
-    myCar.drive();
