@@ -1,7 +1,9 @@
 package ex03_collections;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Bingo {
@@ -22,7 +24,15 @@ public class Bingo {
 		while(bingo.size() != 25) {
 			bingo.add((int)((Math.random()*50)+1));
 		}
+		List<Integer> list = new ArrayList<>(bingo	);
+		Collections.shuffle(list);
 		
+		for(int i = 0; i < 25; i++) {
+			System.out.print(list.get(i) + " ");
+			if((i+1) % 5 == 0) {
+				System.out.println();
+			}
+		}
 		
 	}
 }
