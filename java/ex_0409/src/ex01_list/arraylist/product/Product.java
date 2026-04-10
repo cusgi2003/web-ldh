@@ -13,7 +13,7 @@ public class Product {
 		this.quantity = quantity;
 	}
 	
-	public void setQunatity(int quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 	
@@ -26,11 +26,6 @@ public class Product {
 	
 	public int getQuantity() {
 		return quantity;
-	}
-	
-	
-	public int getTotalPrice(int price, int quantity) {
-		return price * quantity;
 	}
 	
 	@Override
