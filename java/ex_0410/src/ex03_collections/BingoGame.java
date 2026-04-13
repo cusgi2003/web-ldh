@@ -39,7 +39,7 @@ public class BingoGame {
 			// 1-2단계
 			// 빙고 개수가 3개 이상이면 게임 종료
 			// "3빙고 완성! 게임 종료"
-			if(countBingo == 3) {
+			if(countBingo >= 3) {
 				System.out.println("3 빙고 완성! 게임 종료");
 				break;
 			}
