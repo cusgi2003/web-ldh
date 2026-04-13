@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Set;
 
 public class Bingo {
-	static int[][] board = new int[5][5];
+	private int[][] board = new int[5][5];
 	
-	public static void main(String[] args) {
+	public void createBoard() {
 		// 1 ~ 50사이의 난수가 있다
 		// 5 x 5 의 빙고판에 25개의 숫자를 채운다
 		// 겹치면 안됨
@@ -42,7 +42,7 @@ public class Bingo {
 	// 메서드명 : markNumber'
 	// 숫자를 넘겨받으면 해당 빙고칸의 숫자를 0으로 반바꾸고 true를 반환
 	// 아니면 false를 반환
-	public static boolean markNumber(int number) {
+	public  boolean markNumber(int number) {
 		for(int i = 0; i < board.length; i++) {
 			for(int j = 0; j < board[i].length; j++) {
 				if(board[i][j] == number) {
@@ -64,8 +64,9 @@ public class Bingo {
 	// 13 06 40 19 47
 	
 	public void printBoard() {
+		System.out.println("===> 현재 빙고판 <===");
 		for(int i = 0; i < board.length; i++) {
-			for(int j = 0; j < board.length; j++) {
+			for(int j = 0; j < board[i].length; j++) {
 				if(board[i][j] == 0) {
 					System.out.printf("%3s", "X");
 				} else {
@@ -74,7 +75,6 @@ public class Bingo {
 			}
 			System.out.println();
 		}
-		System.out.println("-----------------");
 	}
 	
 }			
