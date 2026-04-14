@@ -37,6 +37,7 @@ public class Main {
 		UserService service = new UserService();
 		System.out.println("성인 회원");
 		
+		// 다른 메서드가 람다식을 받아서 실행
 		service.filterUsers(users, service.getFilter("adult"));
 		System.out.println("-----------");
 		System.out.println("서울 거주 회원");
