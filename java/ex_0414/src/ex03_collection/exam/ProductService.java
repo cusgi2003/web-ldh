@@ -35,8 +35,9 @@ public class ProductService {
 	public void updateProduct(String code, Function<Product, Product> updater) {
 		Product product = findByCode(code);
 		if (product != null) {
-			int index = products.indexOf(product);
-			products.set(index, updater.apply(product));
+			updater.apply(product);
+		} else {
+			System.out.println("상품이 존재하지 않습니다.");
 		}
 	}
 
