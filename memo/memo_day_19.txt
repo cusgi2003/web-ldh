@@ -1,0 +1,64 @@
+람다식을 쓰기위해서는 인터페이스가 필요
+자주 사용되는 메서드의 형태는 경우의 수가 적기 때문에
+java에서 인터페이스를 제공하고 있다.
+
+람다식을 만드는 것 : 추상메서드를 오버라이딩 하는 것
+
+
+Function<T,R>
+	
+	R apply(T t) : 매개변수가 1개고 반환값이  있는 메서드
+
+Consumer
+	
+	void accept(T t) : 매개변수가 1개, 반환값이 없는 메서드
+
+Supplier 
+
+	T get() : 매개변수가 없고 반환값이 있는 메서드
+
+Predicate
+
+	boolean test(T t) : 매개변수가 1개,  반환값이 논리형인 메서드
+
+
+매개변수가 2개인 람다식
+
+	BiConsumer<T,U>
+	BiPredicate<T, U>
+	biFunction<T, U, R>
+
+
+람다식의 합성과 결합
+
+	Function
+		f.andThen(g) : f를 실행하고 g를 실행
+		f.compose(g) : g를 실행하고 f를 실행함
+
+	Predicate
+		f.and(g) : f와 g의 결과가 참이어야 true 한다.
+		f.or(g) : f 또는 g의 결과가 참이어ㅑ 한다
+		negate()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
