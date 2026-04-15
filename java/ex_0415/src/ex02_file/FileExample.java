@@ -2,6 +2,7 @@ package ex02_file;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class FileExample {
 	public static void main(String[] args) {
@@ -106,6 +107,48 @@ public class FileExample {
 		} else {
 			System.out.println("이미 존재하는 폴더");
 		}
+		
+		// mkdirs()는 폴더 1개만 만드는 것도 가능
+		// mkdir()은 폴더를 여러개 만드는 것은 불가능
+		
+		
+		// delete()
+		// 파일 또는 빈 폴더를 삭제한다
+		result = f2.delete();
+		if(result) {
+			System.out.println("삭제 완료");
+		} else {
+			System.out.println("해당 파일/폴더 없음");
+		}
+		
+		// 폴더는 내부가 비어 있어야 삭제 가능
+		// 안에 파일이 있는 폴더는 바로 삭제되지 않는다
+		
+		
+		// list()
+		// 이름 목록을 문자열 배열로 반환한다
+		// 목표 폴더의 바로 밑에 있는 폴더와 파일만 반환
+		dir = new File("C:\\Users\\adminn\\Desktop\\web-ldh\\java\\ex_0415\\myFolder");
+		String[] names = dir.list();
+		if(names != null) {
+			System.out.println(Arrays.toString(names));
+		}
+		
+		// listFiles()
+		// File[] 배열로 반환
+		File[] files = dir.listFiles((d, name) -> name.endsWith(".txt"));
+		
+		for(File file : files) {
+			System.out.println(file.getName());
+		}
+		
+		// File로는 파일 안에 쓰여진 내용을 읽고 쓸 수는 없다는 점
+		// 파일 그 자체가 아니라 파일의 위치정보와 상태정보를 담당한다
+		
+		
+		
+		
+		
 		
 	}
 }
