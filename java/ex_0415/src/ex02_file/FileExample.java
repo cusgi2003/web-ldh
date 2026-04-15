@@ -86,11 +86,26 @@ public class FileExample {
 		}
 		
 		
+		// mkdir()
+		// 폴더를 생성해준다
+		File dir = new File("myFolder");
+		boolean result = dir.mkdir();
+		if(result) {
+			System.out.println("폴더 생성");
+		} else {
+			System.out.println("이미 존재하는 폴더");
+		}
 		
 		
-		
-		
-		
+		// mkdirs()
+		// 필요한 상위 폴더까지 모두 생성
+		dir = new File("a/b/c");
+		result = dir.mkdirs();
+		if(result) {
+			System.out.println("폴더 생성");
+		} else {
+			System.out.println("이미 존재하는 폴더");
+		}
 		
 	}
 }
