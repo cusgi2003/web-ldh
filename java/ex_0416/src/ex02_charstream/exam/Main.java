@@ -1,44 +1,55 @@
 package ex02_charstream.exam;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		Scanner sc = new Scanner(System.in);
 		
-		FileOutputStream fos = null;
-		FileInputStream fis = null;
-		try {
-			fos = new FileOutputStream("users.txt");
+		File f = new File("users.txt");
+		
+		while(true) {
+			System.out.println("1. 회원가입 | 2. 로그인 | 3. 종료");
 			
-			System.out.print("아이디 입력 : ");
-			String inputId = sc.nextLine();
+			System.out.print("선택 : ");
+			int choice = sc.nextInt();
 			
-			System.out.print("비밀번호 입력 : ");
-			String inputPass = sc.nextLine();
-			
-			User u = new User(inputId, inputPass);
-			byte[] res = u.toByteData();
-			
-			fos.write(res);
-			fos.close();
-			
-			fis = new FileInputStream("users.txt");
-			int code = 0;
-			
-			while((code = fis.read()) != -1) {
-				if(fis.equals(res)) {
-					System.out.println("로그인 성공");
-				} else {
-					System.out.println("로그인 실패");
+			if(choice == 1) {
+				System.out.print("아이디 : ");
+				String id = sc.nextLine();
+				System.out.print("비밀번호 : ");
+				String password = sc.nextLine();
+				
+				User newUser = new User(id,password);
+				FileOutputStream fos = new FileOutputStream(f);
+				fos.write(newUser.toByteData());
+				fos.close();
+				
+				System.out.println("회원가입 완료");
+			} else if(choice == 2) {
+				System.out.print("아이디 : ");
+				String id = sc.nextLine();
+				System.out.print("비밀번호 : ");
+				String password = sc.nextLine();
+				
+				if(!f.exists()) {
+					System.out.println("가입된 회원이 없습니다");
+					continue;
 				}
+				
+				// 파일 전체 읽기
+				FileInputStream fis = new FileInputStream(f);
+				byte[] buffer = new byte[(int) f.length()];
+				fis.read(buffer);
+				fis.close();
+				
+				String allUsersData = new String(buffer);
+				String[] lines = allUsersData.split("\n");
 			}
-			
-			
-		} catch (Exception e) {
-			// TODO: handle exception
 		}
+
 	}
 }
