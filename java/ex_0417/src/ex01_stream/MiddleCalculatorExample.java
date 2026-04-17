@@ -55,10 +55,13 @@ public class MiddleCalculatorExample {
 		sList.stream()
 		.sorted((a,b) -> a.length() - b.length())
 		.forEach(x -> System.out.print(x + " "));
+		System.out.println();
 		
 		// 중복제거
 		// distinct()
 		
 		int[] iArr = {1,1,2,3,3,3,3,3,4,4,4,4,4,5,5,6};
+		Arrays.stream(iArr).distinct()
+		.forEach(x -> System.out.print(x + " "));
 	}
 }
