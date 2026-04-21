@@ -85,7 +85,18 @@ sudo(Superusesr Do)
   사용자를 그룹에서 제거하기
       ㄴ sudo gpasswd -d 아이디 그룹명
 
+  사용자에게 실행권한 추가 
+      ㄴ chmod u+x test.txt
 
+ 그룹의 쓰기 권한 제거
+      ㄴ chown g-w memo.txt
 
+ 기타 사용자 읽기 권한 제거
+      ㄴ chmod o-t memo.txt
+
+ sudo chown 새소유자 파일명
+
+ 디렉터리에서 하위 파일까지 한 번에 소유권 변경하기
+     ㄴ sudo chown -R 사용자:그룹명 디렉토리명
   
     
