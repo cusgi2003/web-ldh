@@ -33,3 +33,37 @@
   개념 스키마 : 데이터베이스 전체 구조를 논리적으로 정의, 데이터 간의 관계와 보안등을 포함
   내부 스키마 : 데이터가 물리적 저장 장치에 어떻게 저장되는지를 정
 ```
+### SQL문
+  - 구조화된 질의언어(Structuerd Query  Language)의 약자로 DBMS 상에서 데이터를 읽고 쓰고 삭제하는 등
+    관리하기 위한 일종의 프로그램 언어
+    ```
+      1. DDL(Data Definition Language) : 데이터 정의어
+        - 데이터 베이스 객체를 관리하는 언어
+      2. DML(Data Manipulation Language) : 데이터 조작어
+        - 데이터 삽입, 조회, 삭제, 갱신 등 실제 데이터를 조작하는 언어
+      3. DCL(Data Controll Language) : 데이터 제어어
+        - grant, revoke 등 키워드를 가지는 문장
+      4. TCL(Transaction Controll Language) : 트랜잭션 언어
+        - commit, rollback, savepoint
+    ```
+#### 데이터베이스 생성
+```
+  CREATE DATABASE IF NOT EXISTS '데이터베이스 이름'
+  CHARACTER SET = utf8mb4
+  COLLATE = utf8mb4_unicode_ci
+```
+▷ IF NOT EXISTS : 같은 이름의 데이터베이스가 존재하면 오류내지 않고 그냥 무시한다.  
+▷ CHARACTER SET = utf8mb4 : 문자를 저장할 기본 문자셋을 지정한다.  
+▷COLLATE = utf8mb4_unicode_ci : 정렬과 비교의 기준을 설정한다.
+
+#### 행
+
+#### 열
+
+#### 도메인
+
+### 제약조건
+
+
+
+    
