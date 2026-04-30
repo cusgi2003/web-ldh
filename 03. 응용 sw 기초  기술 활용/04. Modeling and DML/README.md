@@ -14,8 +14,19 @@
   FROM 테이블명
   WHERE 조건식;
 ```
-#### 1-1 NULL 비교
+#### NULL 비교
 ``` sql
   -- 컬럼 값이 NULL인 행만
   WHERE 컬럼명 IS NULL;
   -- 컬럼 값이 NULL이 아닌 행만
+  WHERE 컬럼명 IS NOT NULL;
+```
+#### SQL 연산자
+BETWEEN : A와 B 사이의 값을 조회할 때 사용  
+IN : OR을 대신해서 사용하는 연산자
+``` sql
+  WHERE 컬럼명 BETWEEN '비교값1' AND '비교값2';
+  WHERE 컬럼명 in('비교값1', '비교값2', ...);
+```
+
+
