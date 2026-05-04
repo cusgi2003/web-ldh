@@ -122,8 +122,8 @@
 
 #### FOREIGN KEY(외래키)
 ```
-  CONSTRAINT 외래키명 FOREIGN KEY(컬럼명, ...)
-  REFERENCES 참조테이블 (참조테이블 컬럼명, ...);
+  CONSTRAINT FOREIGN KEY(컬럼명)
+  REFERENCES 참조테이블 (참조테이블 컬럼명);
 ```
 ##### 외래키 제약사항
 ```
