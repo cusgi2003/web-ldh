@@ -23,4 +23,15 @@ select -> from -> where -> group by -> having
     select CATEGORY, SUM(AMOUNT) from SALES
     group by CATEGORY with ROLLUP;
 ```
-  
+
+### 순위 함수
+``` sql
+  RANK() OVER(order by 컬럼명 ASC/DESC);
+  공동 순위 발생 -> 다음 순위로 건너 뜀 (1,2,2,4)
+
+  DENSE_RANK()
+  공동 순위는 있지만 건너뛰지 않음 (1,2,2,3)
+
+  ROW_NUMBER()
+  무조건 순서대로  번호 (1,2,3,4)
+```
