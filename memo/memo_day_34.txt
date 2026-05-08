@@ -1,0 +1,176 @@
+index
+ㄴ 조회를 빠르게 하기 위한 목적으로 사용
+ㄴ where, order by, group by에 많이 사용되는 속성에 대해 미리 접근을 기록해놓는다
+ㄴ 실제 조회를 할 때 해당 컬럼이 사용되면 index가 자동으로 사용
+ㄴ insert, update, delete에 대해서는 좀 불편하다
+
+Sub Query
+ㄴ sql문 안에 sql문이 있는 것
+ㄴ 특정 조건을 다른 테이블 조회 결과로 판단할 때
+ㄴ join없이 단계적으로 데이터를 조회
+
+종류
+- 단일 행 서브쿼리 : 결과가 1개
+- 다중 행 서브쿼리 : 결과가 여러개
+
+사용하는 기호
+IN : 여러 값 중 하나
+ANY : 하나라도 만족
+ALL : 모두 만족
+
+- 다중 컬럼 서브쿼리 : 컬럼이 여러개
+- 상관 서브쿼리 : 바깥 쿼리와 연결됨
+- from절 서브쿼리 : 가상 테이블처럼 사용
+
+
+View
+- SELECT문의 결과를 가상의 테이블처럼 저장해놓은 객체
+
+복잡한 SELECT문을 간단하게 저장할 수 있는 효과
+
+VIEW를 만든다고 해서 실제로 데이터가 저장되는것은 아님
+원본데이터가 바뀌면 VIEW에 들어있는 데이터도 바뀐다.
+
+
+AUTO_INCREMENT
+	숫자 값을 자동으로 1씩 증가시켜서 입력해주는 속성
+	데이터를 추가할 때마다 직접 번호를 입력하면 번거로기 때문에 사용한다
+	반드시 숫자 타입의 컬럼에만 붙여야 한다
+	인덱스가 있어야 하기 때문에 PK와 함께 사용한다
+	한 테이블에 하나만 사용이 가능하다
+	직접 값을 넣을 수도 있다
+
+	INSERT INTO board(board_id, title, content)
+	values (100, '관리자 공지', '직접 번호 입력');
+	그 다음 자동 증가 값은 보통 101부터시작한다
+	ㄴ중간 번호는 재사용하지 않는다
+	1. 첫번째 글
+	2. 두번째 글
+	3. 세번째 글
+	delete from board where board_id = 3;
+	새 글을 추가하게 되면 board)id가 4로 추가된다.
+	
+	AUTO_INCRENET는 연속 번호 보장용이 아니라 고유 식별자 생성용이다.
+	INSERT 했다가 ROLLBACK해도 다음 번호로 넘어간다.
+	테이블 생성 후 다음 증가값을 바꿀 수 있다
+	ㄴ ALTER TABLE 테이블명 AUTO_INCREMENT = 1000;
+		이후 새 데이터는 1000부터 들어갈 수 있다
+
+LIMIT
+	조회 결과를 제한하는 절
+	"몇개까지만 보여줘"
+
+	select * from 테이블 LIMIT 개수;
+
+	ORDER BY화 함께 많이 사용됨
+	내림차순으로 정렬해서~~
+
+	데이터가 몇 백만건 들어있는 테이블에서 LIMIT이 없으면 위험할 수 있다
+
+LIMIT 시작위치, 개수
+LIMIT 개수 OFFSET 시작위치 
+
+페이징처리할 때 사용
+select * from board order by board_id desc
+LIMIT 0 , 10; -> 0개 건너뛰고 10개 조회 (1 ~ 10)
+
+select * from board order by board_id desc
+LIMIT 10 , 10; -> 10개 건너뛰고 10개 조회 (11~ 20)
+
+
+Sorted Program 
+- 절차형 SQL 문법
+- MySql 안에서 프로그래밍처럼 SQL을 실행하기 위한 문법
+
+Sorted Program에서는 SQL에 프로그래밍적인 요소를 집어넣을 수 있다
+변수, 조건문, 반복문, 예외문
+
+Sorted Program 
+- MySQL 서버 안에 저장해두고 실행하는 프로그램의 단위
+Stroed Procedure 여러 SQL 작업을 묶어서 실행하는 프로시저
+Stored Function : 값을 계산해서 변환하는 함수
+Trigger : INSERT, UPDATE, DELETE시 자동 실행
+Event : 정해진 시간마다 자동 실행
+
+Stored Program의 핵심
+DELIMITER
+CREATE PROCEDURE hello()
+BEGIN
+	select 'Hello MySQL Stored Program' AS message
+END
+
+※ DELIMITER
+MySQL에서 기본적으로 세미콜론을 만나면 SQL 문장이 끝난다고 판단
+프로시저 전체가 끝날 때까지;로 끝난 것으로 보지말고, // 만났을 때 끝난 것으로 판단해라
+
+BEGIN ~ END는 여러 SQL 문장을 하나의 블록으로 묶는 문법
+
+BEGIN
+	문장1;
+	문장2;
+	문장3;
+END
+
+
+변수를 선언하는 DECLARE
+DECLARE 변수명 자료형 DEFAULT 기본값;
+
+DECLARE v_count int default 0
+DECLARE v_name varchar(50) default '홍길동'
+
+BEGIN ~ END 블록의 가장 앞부분에 작성해야 한다
+일반 SQL문 뒤에 선언하면 오류가 난다
+
+BEGIN
+DECLARE v_num int default 0;
+
+select '시작';
+END;
+
+
+변수에 값을 넣는 SET
+SET 변수명 = 값;
+
+
+
+매개변수 IN, OUT, INOUT
+
+IN은 외부에서 값을 받아오는 매개변수
+create procedure 프로시저명(in 매개변수명 타입)
+
+OUT은 프로시저 내부에서 만든 값을 외부로 내보내는 매개변수
+create procedure 프로시저명(out  매개변수명 타입)
+
+INOUT은 값을 받아오고, 수정한 뒤 다시 내보내는 역할
+create procedure 프로시저명(INOUT 매개변수명 타입)
+
+IF문
+IF 조건 THEN
+	실행문;
+ELSEIF 조건 THEN
+	실행문;
+ELSE
+	실행문;
+END IF;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
