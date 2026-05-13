@@ -1,0 +1,20 @@
+Stroed Program
+	MySQL에서 프로그래밍적으로 동작하는 프로그램
+	ㄴ 프로시저 : 여러 개의 SQL을 한 번에 처리할 수 있는 함수
+	ㄴ Funcion : 값을 반환하는 함수
+	ㄴ handler : 예외처리
+	ㄴ cursor : 한 행씩 데이터를 꺼내서 처리하는 문법
+	ㄴ trigger : Insert, update, delete 문이 실행됐을 때 이벤트의 처리
+
+
+Java와 MySQL 연동하기
+ㄴ JDBC Driver로 연결
+	ㄴ Java 프로그램과 데이터베이스를 연결해주는 통로 역할
+	ㄴ Java에서의 요청을 DB를 연결하는 역할
+	ㄴ SQL을 전달하는 역할
+	ㄴ 결과를 받아오는 역할
+
+DBMS 회사마다 JDBC Driver가 다르다
+MySQL : mysql-connector-j
+Oracle : ojdbc
+PostgreSQL : postgresql
