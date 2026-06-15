@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정적페이지 만들어보기</title>
+</head>
+<body>
+    <!-- header 표현하기  -->
+    <header>
+        <h1>홍길동</h1>
+    </header>
+
+    <!-- 목차를 내비게이션하여, 어떤 항목을 나타낼 것인지 미리 보여준다. -->
+    <nav>
+        <a href="#about">소개</a>
+        <a href="#technology">기술</a>
+        <a href="#project">프로젝트</a>
+        <a href="#contact">연락처</a>
+    </nav>
+
+
+    <main>
+        <!-- 섹션을 통해 내비게이션에서 소개할 내용을 각 id별로 소개해준다. -->
+        <section id="about">
+            <h2>소개</h2>
+            <p>웹 개발을 막 시작한 입문자이다.</p>
+            
+            <!-- 이미지를 나타내며, 만약 이미지 업로드가 실패하면 "그림 소개"를 내보낸다.
+             figcaption을 통해 그림에 대한 추가 설명을 해준다. -->
+            <img src="images/profile.jpg" alt="그림 소개">
+            <figcaption>첫 프로젝트를 기록중이다.</figcaption>
+        </section>
+
+        <section id="technology">
+            <h2>기술</h2>
+            <!-- 어떤 기술이 들어있는지, 언어 이해도가 어느 정도인지 작성한다.
+             한 눈에 알아보기 쉽게 ul로 묶고 li로 설명을 작성한다. -->
+            <ul>
+                <li>HTML5와 시멘트 마크업이다.</li>
+                <li>기본 CSS 선택자를 조금 안다.</li>
+                <li>개발자 도구 사용을 시작한다.</li>
+            </ul>
+        </section>
+        
+        <section id="project">
+            <h2>프로젝트</h2>
+            <h3>나의 첫 웹페이지</h3>
+            <p>시멘틱 태그와 접근성을 고려해 작성했다.</p>
+            <time datetime="2025-10-21">2025년 10월 21일</time>
+        </section>
+
+        <aside>
+            <h2>배운 점</h2>
+            <p>문서 구조가 명확하면 스타일과 동작을 더 쉽게 얹을 수 있다.</p>
+        </aside>
+    </main>
+
+
+    <footer id="contact">
+        <h2>연락처</h2>
+        <a href="#">hello@example.com</a>
+        <br>
+        <small>&copy; 2025 홍길동이다.</small>
+    </footer>
+</body>
+</html>
