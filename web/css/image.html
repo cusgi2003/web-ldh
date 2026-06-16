@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        p {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+        }
+
+        .b1{
+            background-color: #3498db;
+        }
+
+        .b2{background-image: url(../img/dog.jpg);}
+
+        .b3{
+            background-image: url("dog.jpg");
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+
+        /* 배경 축약 속성 
+        색상, 이미지, 반복, 위치를 한 번에 지정할 수 있다 */
+        .b4{
+            background: skyblue url("dog.jpg") no-repeat;
+        }
+
+
+        .d1{
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(pink, #fff);
+        }
+
+        .d2{
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(45deg, pink, #fff);
+        }
+
+    </style>
+</head>
+<body>
+    <p class="b1">안녕하세요 반갑습니다 css 공부중입니다.</p>
+    <p class="b2">안녕하세요 반갑습니다 css 공부중입니다.</p>
+    <p class="b3">안녕하세요 반갑습니다 css 공부중입니다.</p>
+    <p class="b4">안녕하세요 반갑습니다 css 공부중입니다.</p>
+</body>
+</html>
