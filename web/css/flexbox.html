@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 방향 실습</title>
+    <style>
+        section {
+            display: flex;
+            border: 1px dashed black;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        /* 개별 색상 클래스 지정 */
+        .green {
+            background: yellowgreen;
+        }
+
+        .violet {
+            background: violet;
+        }
+
+        .blue {
+            background: cornflowerblue;
+        }
+
+
+        .a { background: red; }
+        .b { background: gold; color: black; }
+        .c { background: royalblue; }
+        .d { background: green; }
+        .e { background: violet; color: black; }
+
+
+        /* flex 방향 클래스 */
+        .row {
+            flex-direction: row;
+        }
+
+        .rowReverse {
+            flex-direction: row-reverse;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .columnReverse {
+            flex-direction: column-reverse;
+        }
+
+
+        .flex-start { justify-content: flex-start; }
+
+    </style>
+</head>
+<body>
+    <h3>row</h3>
+    <section class="row">
+        <div class="box green">01</div>
+        <div class="box violet">02</div>
+        <div class="box blue">03</div>
+    </section>
+
+    <h3>row-reverse</h3>
+    <section class="rowReverse">
+        <div class="box green">01</div>
+        <div class="box violet">02</div>
+        <div class="box blue">03</div>
+    </section>
+
+    <h3>column</h3>
+    <section class="column">
+        <div class="box green">01</div>
+        <div class="box violet">02</div>
+        <div class="box blue">03</div>
+    </section>
+
+    <h3>column-reverse</h3>
+    <section class="columnReverse">
+        <div class="box green">01</div>
+        <div class="box violet">02</div>
+        <div class="box blue">03</div>
+    </section>
+
+    <hr>
+
+    <h2>justify-content</h2>
+    <section class="flex-start">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box c">C</div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+  </section>
+</body>
+</html>
