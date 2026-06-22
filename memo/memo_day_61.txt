@@ -1,0 +1,55 @@
+rem : html 태그의 크기를 따라간다
+% : 부모 요소 기준으로 비율이 결정
+
+display 
+- 요소를 화면에 어떻게 배치할 것인가
+block : 한 줄 전체 차지한다.
+inline : 콘텐츠 만금만 너비를 차지한다.
+inline-block : inline처럼 배치가능하고 block처러 ㅁwidth, height 설정 가능하다
+none : 화면에서 완전히 사라지고 공간도 차지하지 않는다
+flex : 자식 요소를 쉽게 정렬할 수 있게 한다
+
+flex 속성을 적용하는 요소를 컨테이너라고 한다.
+flex 속성에 영향을 받는 요소를 item이라고 한다.
+
+컨테이너 속성
+flex-direction : 배치하려는 item의 주 축을 결정
+- row
+- row-reverse
+- column
+- column-reverse
+flex-wrap : 브라우저의 길이가 줄어들 때 item을 다음 줄로 넘길지 결정
+- no-wrap
+-wrap
+- wrap-reverse
+flex-flow : direction과 wrap의 단축 속성
+- flex-flow
+justify-content : 주 축에서 정렬방법을 결정
+- flex-start
+- flex-end
+- center
+- space-between
+- space-around
+aligin-items : 교차 축에서 items의 정렬 방법을 설정
+- stretch
+- flex-start
+- flex-end
+- center
+- baseline
+	ㄴ item 박스의 크기가 제각각이더라도, 텍스트를 기준으로 맞춘다.
+
+item 관련 속성
+order : item의 순서를 결정
+flex-row : item의 증가 비율을 결정
+flex-shrink : item의 감소 비율을 결정
+flex-basis : item의 기본 크기를 설정
+flex : grow, shrink, basis의 단축속성이다
+align-self : 교차축에서의 item 정렬 방법을 설정한다
+
+
+
+
+
+
+
+
