@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수강생 관리 화면</title>
+
+    <style>
+        body{
+            background-color: #f5f5f5;
+            font-style: "Arial";
+        }
+
+        .title{
+            color: navy;
+            font-size: 30px;
+        }
+
+        .student-input{
+            border: 2px solid black;
+            background-color: white;
+        }
+
+
+        .student-info{
+            border: 2px solid black;
+            background-color: white;
+        }
+
+        .student-range{
+            border: 1px solid gray;
+        }
+
+        .studnet-pix{ background-color: #dddddd;}
+    </style>
+</head>
+<body>
+    <h1 class="title">수강생 관리 화면</h1>
+
+    <div class="student-input">
+        <h2>수강생 등록</h2>
+        <p>이름 <input type="text" placeholder="이름을 입력하세요">
+            과정 선택 <input type="">
+            <input type="button" value="등록">
+        </p>
+    </div>
+    
+    <h2>수강생 목록</h2>
+
+    <table class="student-info">
+        <div class="student-range">
+            <tr class="studnet-pix">
+                <th>번호</th>
+                <th>이름</th>
+                <th>과정명</th>
+                <th>출석 상태</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>김학생</td>
+                <td>HTML 기초</td>
+                <td>출석</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>이학생</td>
+                <td>CSS 기초</td>
+                <td>지각</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>박학생</td>
+                <td>화면 설계</td>
+                <td>결석</td>
+            </tr>
+        </div>
+    </table>
+</body>
+</html>
