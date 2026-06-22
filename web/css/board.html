@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자유게시판</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #f5f6f8;
+            font-family: sans-serif;
+            padding: 40px 20px;
+        }
+
+        /*  ==============================
+                Board Container
+            ==============================
+         */
+        .board-container{
+            width: 900px;
+            margin: auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /*  ==============================
+                Board Header & Action
+            ==============================
+         */
+
+        .board-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid black;
+            padding: 20px 24px;
+        }
+
+        .board-title{
+            font-size: 24px;
+            color: #111111;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .search-box:focus {
+            border-color: #007bff;
+        }
+
+        .write-btn {
+            padding: 8px 16px;
+            background: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .write-btn:hover {
+            background: #0056b3;
+        }
+
+        /*  ==============================
+                List Header
+            ==============================
+         */
+
+        .list-header tr{
+            display: flex;
+        }
+
+        .list-header th{
+            background-color: #f1f3f5;
+            font-size: 14px;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .col-no{flex: 1;}
+        .col-title{flex: 5;}
+        .col-author{flex: 1;}
+        .col-date{flex: 1;}
+        .col-views{flex: 1;}
+
+        .list-header td{
+            font-size: 14px;
+            padding: 14px 12px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+
+        /*  ==============================
+                List Header
+            ==============================
+         */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            padding: 24px;
+        }
+
+        .page-btn {
+            padding: 6px 12px;
+            border: 1px solid #dee2e6;
+            background: #ffffff;
+            font-size: 14px;
+            color: #495057;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .page-btn:hover {
+            background: #f1f3f5;
+        }
+
+        .page-btn.active {
+            background: #5f5f64;
+            color: #ffffff;
+            border-color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="board-container">
+        <header class="board-header">
+            <h1>📌 자유게시판</h1>
+            <div class="header-actions">
+                <input type="text" class="search-box" value="제목을 검색하세요.">
+                <button class="write-btn">글쓰기</button>
+            </div>
+        </header>
+
+        <main>
+            <table class="list-header">
+                <thead>
+                    <tr>
+                        <th class="col-no">번호</th>
+                        <th class="col-title">제목</th>
+                        <th class="col-author">작성자</th>
+                        <th class="col-date">작성일</th>
+                        <th class="col-views">조회수</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="post-row">
+                        <td class="col-no">5</td>
+                        <td class="col-title"><a href="#">도서관 휴관 안내...</a></td>
+                        <td class="col-author">관리자</td>
+                        <td class="col-date">2026-06-18</td>
+                        <td class="col-views">128</td>
+                        </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <div class="pagination">
+            <button class="page-btn">이전</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn">5</button>
+            <button class="page-btn">다음</button>
+        </div>
+    </div>
+</body>
+</html>
