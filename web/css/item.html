@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="box.css">
+
+    <style>
+        section{
+            display: flex;
+        }
+
+        .o1{
+            order: 1;
+        }
+
+        .o2{
+            order: 2;
+        }
+
+        .o3{
+            order: 3;
+        }
+
+        .o4{
+            order: 4;
+        }
+
+        /* flex-grow
+        남는 여유 공간을 각 flex 아이템이 얼마나 더 
+        차지할지 비율로 설정하는 속성
+        (기본값은 0이고, 숫자가 클수록 공간을 더 많이 가져간다.) */
+        .box{
+            flex-grow: 0;
+        }
+
+        .f1{
+            flex-grow: 1;
+        }
+
+        .f2{
+            flex-grow: 1;
+        }
+
+        .f3{
+            flex-grow: 1;
+        }
+
+        .f3{
+            flex-grow: 1;
+        }
+
+        /* flex-shrink
+        item이 줄어들 때 축소비율을 결정하는 것
+        숫자가 클수록 많이 줄어든다.
+        기본값은 1이고 음수는 무효 */
+
+        .box{
+            width: 400px;
+        }
+
+        .s1{
+            flex-shrink: 1;
+        }
+
+        .s2{
+            flex-shrink: 2;
+        }
+
+        .s3{
+            flex-shrink: 3;
+        }
+
+        .s4{
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+<body>
+    <h2>기본 순서</h2>
+    <section>
+        <div class="box a o1">A</div>
+        <div class="box b o2">B</div>
+        <div class="box c o3">C</div>
+        <div class="box d o4">D</div>
+    </section>
+
+    <h2>order</h2>
+    <section>
+        <div class="box a o2">A</div>
+        <div class="box b o4">B</div>
+        <div class="box c o1">C</div>
+        <div class="box d o3">D</div>
+    </section>
+
+    <h2>flex-grow</h2>
+    <section>
+        <div class="box a f1">A</div>
+        <div class="box b f2">B</div>
+        <div class="box c f3">C</div>
+        <div class="box d f4">D</div>
+    </section>
+
+    <h2>flex-shrink</h2>
+    <section>
+        <div class="box a s1">A</div>
+        <div class="box b s2">B</div>
+        <div class="box c s3">C</div>
+        <div class="box d s4">D</div>
+    </section>
+</body>
+</html>
