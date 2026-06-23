@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .card.success{
+            border: 1px solid #2ecc71;
+            background-color: #e8f8f5;
+        }
+
+        .card.warning{
+            border: 1px solid #f1c40f;
+            background-color: #fef9e7;
+        }
+
+        .card.danger{
+            border: 1px solid #e74c3c;
+            background-color: #fdedec;
+        }
+
+        .card.danger.critical{
+            background-color: #c0392b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="card success">성공 알림입니다</div>
+    <div class="card warning">주의 알림입니다</div>
+    <div class="card danger">위험 알림입니다</div>
+    <div class="card danger critical">심각한 경고 알림입니다</div>
+</body>
+</html>
