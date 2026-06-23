@@ -36,6 +36,42 @@
         a:visited{
             color: #e74c3c
         }
+
+        /* + : 인접한 태그를 선택 */
+        input:checked + label{
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        input:enabled{
+            background-color: #ecf0f1;
+        }
+        input:disabled{
+            background-color: #bdc3c7;
+        }
+        input:required{
+            border: 2px solid orange;
+        }
+
+        input:invalid{
+            outline: none;
+            border-color: red;
+        }
+
+        ul li:first-child{
+            font-weight: bold;
+            color: #2980b9;
+        }
+
+        ul li:last-child{
+            font-weight: bold;
+            color: red;
+        }
+
+        ul li:nth-child(3){
+            font-weight: bold;
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -51,5 +87,35 @@
      <a href="https://www.naver.com">Example 링크</a>
 
      <!-- link -> visited -> hover -> active -->
+
+
+
+    <h2>상태 의사 클래스</h2>
+    <input type="checkbox" id="chk1">
+    <label for="chk1">동의합니다.</label>
+
+    <br><br>
+
+    <input type="text" placeholder="입력가능">
+    <input type="text" disabled placeholder="입력불가능">
+
+    <br><br>
+
+    <input type="text" required placeholder="필수사항">
+
+
+    <hr>
+
+    <h2>구조 의사 클래스</h2>
+    <ul>
+        <li>첫 번째 항목</li>
+        <li>두 번째 항목</li>
+        <li>세 번째 항목</li>
+    </ul>
+
+    <p>첫 번째 문단</p>
+    <p>두 번째 문단</p>
+    <div>이것은 div 문단</div>
+
 </body>
 </html>
