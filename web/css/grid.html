@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            /* 열(column) 만들기
+            grid-template-columns : 1열의 크기, 2열의 크기, 3열의 크기
+            크기에 올 수 있는 단위 : px, %, fr, auto ... */
+            grid-template-columns: 100px 100px 100px;
+            gap: 10px;
+        }
+
+        .container div{
+            border: 1px solid black;
+        }
+
+
+        .menu-container{
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 16px;
+            padding: 16px;
+            background-color: #ecf0f1;
+        }
+
+        .sidebar{
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .content{
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .row-container{
+            display: grid;
+            grid-template-rows: 100px 200px 100px 100px;
+            gap: 12px;
+            padding: 20px;
+        }
+
+        .item{
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+
+        .repeat-container{
+            display: grid;
+            /* repeat(반복횟수, 크기) */
+            grid-template-columns: repeat(4, 80px);
+            gap: 10px;
+        }
+
+        .minmax-container{
+            display: grid;
+            grid-template-columns: minmax(200px, 900px);
+        }
+
+        .auto-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,150px);
+            gap: 10px;
+        }
+
+        .autofit-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,150px);
+            gap: 10px;
+        }
+
+        .area-container{
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 300px 80px;
+
+            grid-template-areas: 
+                "header header"
+                "aside main"
+                "footer footer"
+        }
+
+        .header{
+            grid-area: header;
+            background: lightgreen;
+        }
+
+        .aside{
+            grid-area: aside;
+            background: lightgoldenrodyellow;
+        }
+
+        .main{
+            grid-area: main;
+            background: lightcoral;
+        }
+
+        .footer{
+            grid-area: footer;
+            background: lightskyblue;
+        }
+
+
+        .area-container2{
+            display: grid;
+            
+            grid-template-rows: repeat(4, 100px);
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 10px;
+            padding: 10px;
+
+            grid-template-areas:
+                "header header header"
+                "main   .      ."
+                "main   .      aside"
+                "footer footer footer"
+        }
+
+        .template-container{
+            display: grid;
+
+            /* gird-template : 
+                    "영역 영역" 행높이
+                    "영역 영역" 행높이
+                    / 열너비 열 너비;
+            */
+            grid-template: 
+                "header header header" 80px
+                "main main aside" 350px
+                "footer footer footer" 130px
+                / 2fr 100px 1fr;
+
+            gap: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <h2> fraction으로 크기 정하기</h2>
+    <div class="menu-container">
+        <aside class="sidebar">
+            <h2>sidebar</h2>
+            <p>메뉴 혹은 네비게이션이 들어간다.</p>
+        </aside>
+
+        <main>
+            <h2>Content</h2>
+            <p>남은 공간을 전부 차지하는 영역이다.</p>
+            <p>본문 내용이 여기에 들어간다.</p>
+        </main>
+    </div>
+
+    <hr>
+
+    <h2>행 만들기</h2>
+    <div class="row-container">
+        <div class="item">1번</div>
+        <div class="item">1번</div>
+        <div class="item">1번</div>
+        <div class="item">1번</div>
+    </div>
+
+    <hr>
+
+    <h2>반복 생성</h2>
+    <div class="repeat-container">
+        <div class="item">1번</div>
+        <div class="item">2번</div>
+        <div class="item">3번</div>
+        <div class="item">4번</div>
+    </div>
+
+    <hr>
+
+    <h2>최소값 최대값 지정(minmax())</h2>
+    <div class="minmax-container">
+        <div class="item">minmax</div>
+    </div>
+
+    <hr>
+
+    <h2>auto-fill</h2>
+    <!-- column의 개수를 미리 지정하지 않고 설정된 너비가 
+     허용하는 한 최대한 셀을 채운다 -->
+    <div class="auto-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="autofit-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <hr>
+
+    <h2>grid-template-area</h2>
+    <!-- grid 레이아웃에 이름을 붙여서 배치하는 방법 -->
+    <div class="area-container">
+        <header class="header">header</header>
+        <aside class="aside">aside</aside>
+        <main class="main">main</main>
+        <footer class="footer">footer</footer>
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="area-container2">
+        <header class="header">header</header>
+        <aside class="aside">aside</aside>
+        <main class="main">main</main>
+        <footer class="footer">footer</footer>
+    </div>
+
+    <hr>
+    <h2>grid-templeate</h2>
+    <!-- grid-template-rows, columns, ares의 단축 속성 -->
+    <div class="template-container">
+        <header class="header">header</header>
+        <aside class="aside">aside</aside>
+        <main class="main">main</main>
+        <footer class="footer">footer</footer>
+    </div>
+</body>
+</html>
