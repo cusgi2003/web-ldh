@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h-btn{
+            background-color: skyblue;
+            padding: 10px 20px;
+        }
+
+        .h-btn:hover{
+            background-color: orange;
+        }
+        .h-btn:active{
+            background-color: red;
+        }
+
+        input{
+            border: 2px solid gray;
+            padding: 10px;
+            outline: none;
+        }
+
+        input:focus{
+            border: 2px solid blue;
+        }
+
+        /* 아직 방문하지 않은 상태 */
+        a:link{
+            color: #3498db;
+        }
+
+        /* 방문한 상태 */
+        a:visited{
+            color: #e74c3c
+        }
+    </style>
+</head>
+<body>
+    <h2>동적 의사 클래스</h2>
+    <!-- 동적 의사 클래스
+     사용자의 동작에 따라 상태가바뀌는 의사 클래스 -->
+     <button class="h-btn">버튼</button>
+     <br><br>
+
+     <input type="text" placeholder="이름입력">
+     <br><br>
+
+     <a href="https://www.naver.com">Example 링크</a>
+
+     <!-- link -> visited -> hover -> active -->
+</body>
+</html>
