@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 20px;
+        }
+        
+        .user-list{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+        }
+
+        .card{
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .user-list .card:first-child{
+            border: 2px solid;
+            border: 2px solid #3498db;
+        }
+
+        .user-list .card:nth-child(2){
+            background-color: #fffcf0;
+        }
+
+        .role-badge{
+            display: inline-block;
+            font-size: 14px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 15px;
+        }
+
+        .role-badge.admin{
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .card:hover {
+            background-color: #e9ecef;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>유저관리 대시보드</h2>
+
+    <div class="user-list">
+        <div class="card">
+            <h3 class="user-name">홍길동 대리</h3>
+            <span class="role-badge admin">관리자</span>
+            <div class="check-group">
+                <input type="checkbox" id="check-tag1">
+                <label for="check-tag1">현재 작업 맴버로 선택</label>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="user-name">이영희 사원</h3>
+            <span class="role-badge member">일반 회원</span>
+            <div class="check-group">
+                <input type="checkbox" id="check-tag2">
+                <label for="check-tag2">현재 작업 맴버로 선택</label>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="user-name">김철수 사원</h3>
+            <span class="role-badge member">일반 회원</span>
+            <div class="check-group">
+                <input type="checkbox" id="check-tag3">
+                <label for="check-tag3">현재 작업 맴버로 선택</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
