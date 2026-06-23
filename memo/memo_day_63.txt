@@ -66,8 +66,31 @@ grid-template-areas
 웹페이지 전체구조는 grid-template-areas를 사용하면 배치하기 쉽다.
 
 
+BEM 방법론
+- CSS 클래스 이름을 일정한 규칙에 따라 작성하는 방
+페이지가 너무 커지게 되면 문제가 생길 수 있다.
+- 클래스 이름이 너무 일반적이라서 다른 영역에서도 사용하면 스타일이 충동할 수 있다
 
+block 
+독립적으로 존재할 수 있는 큰 덩어리
+- header, nav, card, product-card, login-form, profile, footer, ...
 
+Element
+Block 안에 포함되는 구성 요소
+혼자 존재하기 보다는 Block안에서 의미가 있다
+보통 카드 안에는 이미지, 제목, 설명, 가격, 버튼이 있다.
+card_image, card_title, card_description, card_price, card_button
+
+Modifierr
+Block이나 Element의 상태 또는 변형을 의미한다
+상품 카드 중에서 할인 성품을 강조하고싶다면
+<article class = "product-card product-card--sale">
+
+BEM을 쓰면 좋은 상황
+- 페이지가 커질 때
+- 카드, 버튼, 폼 같은 컴포넌트가 반복될 때
+- 여러 사람이 같이 CSS를 작성할 때
+- 클래스이름 충돌을 줄이고 싶을 때
 
 
 
