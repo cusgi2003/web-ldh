@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            gap: 16px;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .product-card{
+            border: 1px solid #ddd;
+            padding: 16px;
+            border-radius: 8px;
+            width: 200px;
+        }
+
+        .product-card__image{
+            width: 100%;
+            height: 200px;
+            background-color: #dad9d8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .product-card__title{
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product-card__price{
+            color: #e74c3c;
+        }
+
+        .product-card--soldout{
+            background-color: #f5f5f5;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-card__image">IMAGE</div>
+        <div class="product-card__title">기본 후드티</div>
+        <div class="product-card__price">30,000원</div>
+    </div>
+
+    <div class="product-card product-card--soldout">
+        <div class="product-card__image">IMAGE</div>
+        <div class="product-card__title">레이어드 멘투맨 [품절]</div>
+        <div class="product-card__price">29,000원</div>
+    </div>
+</body>
+</html>
