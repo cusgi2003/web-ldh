@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @media(조건){
+                선택자 {스타일}
+                선택자 {스타일}
+                선택자 {스타일}
+            } */
+
+        
+        /* 모바일 퍼스트 */
+        /* @media(min-width : 767px){
+            .box{
+                background-color: #bfdbfe;
+            }
+        } */
+
+        @media(min-width : 768px){
+            .box{
+                background-color: tomato;
+            }
+        }
+
+        @media(min-width : 1200px){
+            .box{
+                background-color: magenta;
+            }
+        }
+
+        /* 화면이 767 이하일 때 적용 */
+        @media(max-width : 767px){
+            .box{
+                background-color: lightblue;
+            }
+        }
+
+
+        /* landcape : 가로 방향 너비가 높이보다 클 때
+           portait : 세로 방향 높이가 너비보다 클 때 */
+        /* @media(orientation: landscape){
+            .box{
+                background-color: orange;
+            }
+        } */
+
+        /* prefers-color-schme
+        사용자가 운영체제나 브라우저에서 설정한 라이트모드 또는
+        다크모드를 감지해서 css를 다르게 적용하는 미디어 쿼리 */
+        @media(prefers-color-scheme: dark){
+            .box{background-color: orange;}
+        }
+
+        /* hover
+        기기 자체가 hover를 지원하는 지 확인 */
+        @media(hover:hover){
+            .box:hover{
+                background-color: cornflowerblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 미디어 쿼리
+     화면 크기, 방향, 기기 특성, 사용자 설정에 따라 css를 다르게 적용하는 문법 -->
+    <div class="box">
+        화면 크기를 줄여보세요
+    </div>
+</body>
+</html>
