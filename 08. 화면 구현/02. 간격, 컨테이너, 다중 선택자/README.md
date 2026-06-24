@@ -64,3 +64,25 @@
     - 폰 화면처럼 좁은 화면에서는 글자나 버튼이 화면 끝에 딱 붙어 있으면 답답해서 보기 싫다
     - 컨테이너에 `padding: 16px`만 줘도 “앱처럼 정리된 화면” 느낌이 난다
     - 모바일 UI처럼 부드러운 느낌을 내는 데 아주 중요한 부분이다
+ 
+
+## 그리드 형태 정의
+
+`grid-template-columns`
+
+- 열의 개수와 크기를 정한다.
+- 각 열의 너비(고정, 비율, 자동 등)를 지정하고, 반복 패턴이나 최소/최대 크기 규칙도 만들 수 있다
+```jsx
+    grid-template-columns: 1열크기 2열크기 ...;
+    /* grid-template-columns: [선이름] 1열크기 [선이름] 2열크기 [선이름] ...; */
+```
+- 크기 에는 px, %, fr(비율),auto, min-content, max-content, minmax(), repeat() 등 여러 값이 올 수 있다
+
+  `grid-template-rows`
+
+- 행(세로 방향) 개수와 크기를 정의한다.
+
+```jsx
+grid-template-rows: 1행크기 2행크기 ...;
+/* grid-template-rows: [선이름] 1행크기 [선이름] 2행크기 [선이름] ...; */
+```
