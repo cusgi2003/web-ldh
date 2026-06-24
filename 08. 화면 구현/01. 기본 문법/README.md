@@ -21,3 +21,13 @@
 ```CSS
     <link rel="stylesheet" href="https://cdnjs...">
 ```
+### CSS Cascading(우선순위와 상속)
+
+| 우선순위 | 적용 대상 | 예시 |
+| --- | --- | --- |
+| 1️⃣ | `!important` | `color: red !important;` |
+| 2️⃣ | 인라인 스타일 | `<p style="color: blue;">` |
+| 3️⃣ | ID 선택자 | `#title {}` |
+| 4️⃣ | 클래스, 속성, 가상 클래스 선택자 | `.text {}` |
+| 5️⃣ | 태그 선택자 | `p {}` |
+| 6️⃣ | 상속된 속성 | `body {color: gray;}` |
