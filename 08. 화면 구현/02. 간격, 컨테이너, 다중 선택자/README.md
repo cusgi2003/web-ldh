@@ -78,7 +78,7 @@
 ```
 - 크기 에는 px, %, fr(비율),auto, min-content, max-content, minmax(), repeat() 등 여러 값이 올 수 있다
 
-  `grid-template-rows`
+`grid-template-rows`
 
 - 행(세로 방향) 개수와 크기를 정의한다.
 
@@ -86,3 +86,41 @@
 grid-template-rows: 1행크기 2행크기 ...;
 /* grid-template-rows: [선이름] 1행크기 [선이름] 2행크기 [선이름] ...; */
 ```
+
+`repeat()` 함수
+- 두번째 인수를 몇번 만큼 반복한다.
+`minmax()` 함수
+- 최솟값과 최댓값을 지정할 수 있는 함수이다.
+`auto-fill` / `auto-out` 
+- column의 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채운다.
+
+`grid-template-areas`
+
+- 지정된 그리드 영역 이름을 참조해 그리드 템플릿을 생성한다.
+- .(마침표)를 사용하거나 명시적으로 none을 입력해 빈 영역을 정의할 수 있다.
+
+
+`grid-template`
+
+- `grid-template-rows` , `grid-template-columns` , `grid-template-areas` 의 단축 속성
+  ```jsx
+  /* grid-template 단축 속성 */
+    grid-template:
+      "header header header" 80px /*첫 번재 행의 이름은 header, 높이는 80px*/
+      "main main aside" 350px /*두 번재 행의 이름은 main 및 aside, 높이는 350px*/
+      "footer footer footer" 130px /*세 번재 행의 이름은 footer, 높이는 130px*/
+      / 2fr 100px 1fr; /* 3개의 column, 비율은 왼쪽부터 2 : 100px : 1*/
+
+    gap: 10px;
+    height: 100vh;
+    padding: 16px;
+  }
+  ```
+
+### 그리드 간격 정의
+
+`row-gap` / `column-gap`
+
+- 아이템 사이의 간격을 설정한다.
+
+
