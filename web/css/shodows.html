@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* 요소를 세로로 정렬 */
+            gap: 30px; /* 요소 사이의 간격 */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* height 대신 min-height 권장 */
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        
+        /* 1. 기본 그림자 상자 */
+        .box {
+            width: 200px;
+            padding: 30px;
+            background-color: skyblue;
+            border: 1px solid #ddd;
+            text-align: center;
+            /* 흐림(Blur) 값을 추가해야 gray 색상이 부드럽게 퍼집니다 */
+            box-shadow: inset 5px 10px 10px gray; 
+        }
+
+        /* 2. 안쪽 그림자 입력창 */
+        .input_box {
+            width: 250px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            text-align: center;
+            cursor: pointer;
+            transition: box-shadow 0.2s ease; /* 부드러운 효과 추가 */
+        }
+
+        /* 클릭했을 때 안쪽 그림자 활성화 */
+        .input_box:active {
+            /* 오타 수정: rgba 내부의 연속된 콤마(,,) 제거 */
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15); 
+        }
+
+        /* 3. 프리미엄 다중 그림자 카드 */
+        .card {
+            width: 320px;
+            padding: 20px;
+            background-color: wheat;
+            border-radius: 16px;
+            /* 두 개의 그림자를 쉼표로 연결하여 자연스러운 입체감 연출 */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+                        0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        /* 4. 텍스트 그림자 추가 */
+        .title {
+            font-size: 2.5rem;
+            color: #333;
+            /* x축 y축 흐림 번짐 색상 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">기본 그림자</div>
+    <div class="input_box">안쪽 그림자</div>
+
+    <div class="card">
+        <h2>프리미엄 카드</h2>
+        <p>두 개의 그림자를 겹쳐서 더 자연스럽게 만들었다.</p>
+    </div>
+    
+    <h1 class="title">CSS TEXT SHADOW</h1>
+</body>
+</html>
