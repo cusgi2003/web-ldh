@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body 기본 스타일
+        폰트 : sans-serif
+        배경색 : #f0f2f5
+        글자위치 : 중앙
+        바깥여백 : 0
+        내부여백 : 40px */
+        body{
+            font-family: sans-serif;
+            background-color: #f0f2f5;
+            text-align: center;
+            margin: 0;
+            padding: 40px;
+        }
+
+        /* box 스타일
+        너비 : 100px
+        높이 : 100px
+        배경색 : 마음대로
+        테두리 : 8px
+        바깥여백 : 위는 40px 좌우는 같은 길이로 */
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            border-radius: 8px;
+            margin: 40px auto;
+            transition: all 1s ease;
+        }
+        /* transition : property duration timng-function delay
+        property : 어떤 속성을 변화시킬지
+        duration : 몇 초 동안 변화할지
+        timin-function : 변화 속도 곡선
+        ㄴ ease : 천천히 시 작 -> 빨라졌다가 -> 천천히 끝난다
+        ㄴ linear : 일정한 속도
+        ㄴ ease-in : 천천히 시작
+        ㄴ ease-out : 천천히 끝남
+        ㄴ ease-in-out : 천천히 시작하고 천천히 끝난다
+        
+        delay : 몇 초 뒤 시작할 지  
+        
+        잘 안되는 속성
+        중간값을 계산할 수 없는 속성
+        display
+
+        */
+
+        .box:hover{
+            width: 200px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transition</h1>
+    <p>마우스를 박스 위에 올려보세요</p>
+    <div class="box"></div>
+</body>
+</html>
