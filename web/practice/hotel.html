@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            font-family: system-ui, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* ========================================================= */
+
+        .hotel__header{
+            width: 100%;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: white;
+            border-bottom: 1px solid #ccc;
+            padding: 0 50px;
+            height: 70px;
+        }
+        
+        .hotel__logo{
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #056a5f;
+        }
+        
+        .hotel__menu{
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .hotel__menu li{
+            margin-left: 30px;
+        }
+        
+        .hotel__chk{
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s, ease;
+        }
+
+        .hotel__chk:hover{
+            color: #056a5f;
+            transform: scale(1, 1.12);
+        }
+
+        /* ========================================================= */
+
+        .hotel__main{
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #c9f5e9;
+            padding: 70px 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .search__table{
+            font-size: 34px;
+            color: #0a2d25;
+            font-weight: bold;
+        }
+
+        .search__submit{
+            font-size: 15px;
+            color: #4b8369;
+        }
+
+        .search__choose{
+            background-color: white;
+            padding: 14px 18px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            max-width: 620px;
+            box-sizing: border-box;
+        }
+
+        .search__input{
+            flex: 1;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #333;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search__input:focus{
+            border-color: #056a5f;
+        }
+
+        .search__btn{
+            background-color: #056a5f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+        }
+
+        .search__btn:hover{
+            background-color: #034d45;
+        }
+
+        .hotel-section {
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <header class="hotel__header">
+            <h2 class="hotel__logo">Hotel Finder</h2>
+            <ul class="hotel__menu">
+                <li><a href="#" class="hotel__chk">호텔검색</a></li>
+                <li><a href="#" class="hotel__chk">예약확인</a></li>
+                <li><a href="#" class="hotel__chk">고객센터</a></li>
+            </ul>
+        </header>
+        <main class="hotel__main">
+            <section class="search-section">
+                <h1 class="search__title">나에게 맞는 호텔을 찾아보세요</h1>
+                <p class="search__submit">지역명이나 호텔명을 입력하면 추천 숙소를 확인할 수 있습니다.</p>
+                <div class="search__choose">
+                    <input type="text" placeholder="예 : 제주, 부산, 강릉" class="search__input">
+                    <button class="search__btn">검색하기</button>
+                </div>
+                
+            </section>
+            <section class="hotel-section"></section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
