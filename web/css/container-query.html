@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: system-ui, sans-serif; 
+        }
+        .outer { 
+            border: 3px solid #2980b9; 
+            margin: 20px; 
+            padding: 10px; 
+        }
+        .inner { 
+            background: #d6eaf8; 
+            padding: 20px; 
+            text-align: center; 
+            font-size: 16px; 
+        }
+
+        .layoyt{
+            display: flex;
+            gap: 20px;
+        }
+
+        .area{
+            padding: 20px;
+            background-color: #eee;
+            border: 1px solid #ddd;
+        }
+
+        .narrow{
+            width: 300px;
+        }
+
+        .wide{
+            width: 700px;
+        }
+
+        .button{
+            /* 상하 패딩 10xp 
+            좌우 패딩 14px
+            테두리 둥글게 6px
+            배경 #333
+            글씨색 흰색 */
+            padding: 10px 14px;
+            border-radius: 6px;
+            background-color: #333;
+            overflow: hidden;
+            color: white;
+        }
+        
+
+        /* 미디어 쿼리
+        최소 너비가 700px이상일 때
+        inner 클래스 태그의 배경색을 바꾸고 폰트 크기를 22px로 조정 */
+        @media(min-width:700px){
+            .inner{
+                background-color: tomato;
+                font-size: 22px;
+            }
+        }
+
+        .outer{
+            container-type: inline-size;
+        }
+
+        /* 컨테이너 쿼리의 사용법
+        컨테이너에 continer-type : inline-size 속성을 준다. */
+        @container(min-width:500px){
+            .inner{
+                background-color:tan;
+                font-size:20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">컨테이너 쿼리 vs 미디어 쿼리</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="layout">
+        <section class="area narrow">
+            <div class="card-wrap">
+                <article class="card">
+                    <image src="../img/dog.jpg"></image>
+                    <div class="card-content">
+                        <h2>무선 키보드</h2>
+                        <p>조용한 타건감과 긴 배터리 시간을 제공하는 키보드</p>
+                        <button>구매하기</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="area wide">
+            <div class="card-wrap">
+                <article class="card">
+                    <image src="../img/dog.jpg"></image>
+                    <div class="card-content">
+                        <h2>무선 키보드</h2>
+                        <p>조용한 타건감과 긴 배터리 시간을 제공하는 키보드</p>
+                        <button>구매하기</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
