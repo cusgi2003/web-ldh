@@ -1,0 +1,100 @@
+그림자
+박스 그림
+box-shadow : x-offset y-offset blur spread color inset;
+
+x-offset : x축
+y-offset : y축
+blur : 테두리 경계 흐림 정도
+spread : 그림자의 퍼짐 정도
+color : 색상 rgba(r,g,b,a,opacity)
+inset(선택사항) : 
+
+
+transform : 함수(값);
+
+함수의 종류
+translate(x,y) : x,y축으로 요소를 이동시킨다
+translateX
+translateY
+rotate(deg) : 각도만큼 요소를 회전
+scale(배수) : 요소의 크기를 변경
+scaleX
+scaleY
+
+- 여러개 동시 사용이 가능하다
+transform :
+	translateX(150px)
+	rotate(45deg)
+	sclae(1.3);
+- 의사 선택자와 함께 많이 사용되는 편이다.
+
+.box :  hover{
+	transform:scale(2);
+}
+-> 크기만 커져보이고 다른 요소들이 말리지 않음
+
+
+애니메이션
+CSS 속성값이 바뀔 때, 그 변화를 부드럽게 보여주는 속성
+
+기본 문법
+transition : 속성 시간;
+
+트랜지션을 구성하는 속성
+transition-property : 어떤 속성을 변화시킬지
+transition-duration : 몇 초 동안 변화할지
+transition-timing-function : 변화 속도 방식
+ㄴ ease	 	: 천천히 시작 -> 빨라짐 -> 천천히 끝
+ㄴ liner	 	: 처음부터 끝까지 같은 속도
+ㄴ ease-in	 	: 천천히 시작
+ㄴ ease-out	 	: 천천히 끝남
+ㄴ ease-in-out	: 천천히 시작하고 천천히 끝남
+transition-delay : 몇 초 뒤 시작할지
+
+트랜지션이 잘 적용되는 속성
+- 대부분 숫자로 중간값을 계산할 수 있는 속성
+색상, 크기, 여백, 위치, 투명도, 변형, 그림자
+
+
+display -> opercity를 사용
+opacity
+요소의 투명도를 조절하는 속성
+값 : 0 ~ 1 사이
+
+@keyframes
+CSS 에니메이션의 움직임 순서를 정의하는 문법
+
+transition은 상태가 바뀔때만 동작
+@keyframes은 상태 변화 없이도 자동으로 실행할 수 있다
+
+
+@keyframes move{
+	from{
+		transform : translateX(0);
+	}
+	
+	to{
+		transform translateX(200);
+	}
+}
+
+
+시작과 끝을 정하는 방식
+- from / to
+from : 시작
+to : 끝
+
+- 퍼센트 방식
+0%
+50%
+100%
+
+animation 속성
+- 실행방법을 정한다
+
+animation : 이름 시간 속도방식 지연시간 반복횟수 방향
+
+
+
+
+
