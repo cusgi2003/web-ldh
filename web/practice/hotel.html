@@ -143,6 +143,40 @@
             box-sizing: border-box;
         }
 
+        .hotel__list{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .hotel__item{
+            display: flex;
+            gap: 24px;
+
+            padding: 24px;
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .hotel__image{
+            width: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .hotel__image img{
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hotel__content{
+            margin: 0 0 16px;
+        }
+
     </style>
 </head>
 <body>
@@ -165,7 +199,48 @@
                 </div>
                 
             </section>
-            <section class="hotel-section"></section>
+            <section class="hotel-section">
+                <div class="hotel__list">
+                <h2>추천 호텔</h2>
+                <div class="hotem__item">
+                    <div class="hotel__image">
+                        <img src="https://picsum.photo.500/350?hotel1">
+                    </div>
+
+                    <div class="hotel__content">
+                        <h3>오션 뷰 호텔</h3>
+                        <p>바다가 보이는 객실과 조용한 휴식 공간을 제공하는 호텔입니다</p>
+                    </div>
+                    <div class="hotel__info">1박 120,000원</div>
+                    <button>예약하기</button>
+                </div>
+
+                <div class="hotem__item">
+                    <div class="hotel__image">
+                        <img src="https://picsum.photo.500/350?hotel2">
+                    </div>
+
+                    <div class="hotel__content">
+                        <h3>오션 뷰 호텔</h3>
+                        <p>바다가 보이는 객실과 조용한 휴식 공간을 제공하는 호텔입니다</p>
+                    </div>
+                    <div class="hotel__info">1박 120,000원</div>
+                    <button>예약하기</button>
+                </div>
+
+                <div class="hotem__item">
+                    <div class="hotel__image">
+                        <img src="https://picsum.photo.500/350?hotel3">
+                    </div>
+
+                    <div class="hotel__content">
+                        <h3>오션 뷰 호텔</h3>
+                        <p>바다가 보이는 객실과 조용한 휴식 공간을 제공하는 호텔입니다</p>
+                    </div>
+                    <div class="hotel__info">1박 120,000원</div>
+                    <button>예약하기</button>
+                </div></div>
+            </section>
         </main>
         <footer></footer>
     </div>
