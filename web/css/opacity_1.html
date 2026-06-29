@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* box 스타일
+        너비 150
+        높이 100
+        배경 tomato
+        글씨색 흰색
+        폰트크기 24
+        글씨 정렬 가운데
+        줄 간격 100
+        아래 바깥 여백 20 */
+        .box{
+            width: 150px;
+            height: 100px;
+            background-color: tomato;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 100px;
+            border-bottom: 20px;
+        }
+
+        .box1{
+            opacity: 1;
+        }
+
+        .box2{
+            opacity: 0.5;
+        }
+        .box3{
+            opacity: 0;
+        }
+
+        .card{
+            border: 1px solid black;
+            width: 200px;
+            opacity: 0.3;
+        }
+
+        /* 카드에 마우스를 올렸을 떄 투명도를 1로 하기 */
+        .card{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">0.5</div>
+    <div class="box box3">0</div>
+    <div class="box"></div>
+
+    <hr>
+
+    <div class="card">
+        <h2>제목</h2>
+        <p>내용</p>
+    </div>
+</body>
+</html>
