@@ -174,7 +174,7 @@
             //조건에 맞는 제품만 배열로 담음
             const filteredProducts = products.filter(product => {
                 const titleMatch = product.title.includes(keyword);
-                const categoryMatch = selectedCategory === '전체' || product.ctegory === selectedCategory;
+                const categoryMatch = selectedCategory === '전체' || product.category === selectedCategory;
 
                 return titleMatch && categoryMatch;
             })
