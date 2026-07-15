@@ -57,18 +57,18 @@ public class Chef {
 //		this.knife = knife;
 //	}
 	
-	// 필드 주입
-	// 객체 생성 -> 필드에 주입
-	
-	// setter 주입
-	// 객체 생성 -> Setter 호출 -> 주입
-	
-	// 생성자 주입
-	// 객체생성하면서(생성자 호출) -> 동시에 주입
-	
-	
 	public void cook() {
 		System.out.println("요리를 시작합니다.");
 		knife.cut();
 	}
+	
+	// 필드 주입
+		// 객체 생성 -> 필드에 주입
+		
+		// setter 주입
+		// 객체 생성 -> Setter 호출 -> 주입
+		
+		// 생성자 주입
+		// 객체생성하면서(생성자 호출) -> 동시에 주입
+	
 }
