@@ -8,14 +8,9 @@ spring:
     username: root
     password: 11111111
 
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
-
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
 
     properties:

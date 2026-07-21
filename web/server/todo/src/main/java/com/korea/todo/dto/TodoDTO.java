@@ -2,6 +2,11 @@ package com.korea.todo.dto;
 
 import com.korea.todo.entity.TodoEntity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 // 서비스가 요청을 처리하고클라이언트로 반환할 떄, Entity 자체를 반환하는 경우는
 // 많이 없다
 // 보통은 데이터를 전달하기 위해 사용하는 객체인
@@ -15,8 +20,13 @@ import com.korea.todo.entity.TodoEntity;
 // 만약 서비스 실행 도중 유저 에러가 나면 에러 메시지를 어디에 포함할 것인가
 // Entity에는 서비스 로직과 관련이 없기 때문에 다른 내용을 담기 애매하다
 // 이런 경우 DTO에 에러메시지 필드를 선언하고 DTO에 메시지를 넣어서 전달하면 된다.
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class TodoDTO {
 	private Long id; // 객체 아이디
+	private String userId;
 	private String title; // 할 일
 	private boolean done; // 완료 여부
 	
@@ -24,8 +34,24 @@ public class TodoDTO {
 	// DB에 전달할 때는 무조건 Entity 타입이어야 한다.
 	public TodoDTO(final TodoEntity entity) {
 		this.id = entity.getId();
+		this.userId = entity.getUserId();
 		this.title = entity.getTitle();
 		this.done = entity.isDone(); 
 	}
+	
+	// test로 요청이 들어오면 testoTOdo라는 메서드가 실행되고
+		// 서비스의 메서드를 실행하여 응답으로 반환한다.
+		// ResponseEntity : HTTP 응답 전체를 표현하는 객체
+	
+	// DTO타입을 entity 타입으로 바꾸는 toEntity메서드 작성하기
+		// static으로 만들기
+		
+		public static TodoEntity toEntity(TodoDTO dto) {
+			return TodoEntity.builder()
+					.id(dto.getId())
+					.title(dto.getTitle())
+					.done(dto.isDone())
+					.build();
+		}
 	
 }
