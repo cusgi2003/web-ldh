@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace : 현재 Mapper XML이 어떤 Java 인터페이스와 연결되는지 지정 -->
+<mapper namespace="com.korea.ex_0723.dao.BookDAO">
+
+	<!-- 전체 조회 -->
+	<select id="findAll" resultType="BookVO">
+		SELECT * from books
+	</select>
+
+	<!-- 조건을 통한 조회 -->
+	<select id="findById" resultType="BookVO">
+		SELECT * from books WHERE
+		id=#{id}
+	</select>
+
+	<!-- 추가하기 -->
+	<insert id="insert">
+		INSERT INTO books(title, author, category, price,
+		stock)
+		VALUES(#{title}, #{author}, #{category}, #{price}, #{stock})
+	</insert>
+
+	<update id="update">
+		update books
+		set
+		title = #{title},
+		author = #{author},
+		category = #{category},
+		price = #{price},
+		stock = #{stock}
+		where id =
+		#{id}
+	</update>
+
+	<delete id="delete">
+		delete from books
+		where id = #{id}
+	</delete>
+
+
+	<select id="findByCategory" resultType="BookVO">
+		select * from books where
+		category = #{category}
+	</select>
+
+	<select id="findByTitle" resultType="BookVO">
+		select * from books where
+		title LIKE CONCAT('%', #{title}, '%')
+	</select>
+
+	<select id="countBooks" resultType="int">
+		select count(*) from books
+	</select>
+
+	<!-- 저자에 따른 책 조회 -->
+	<select id="findByAuthor" resultType="BookVO">
+		select * from books
+		<where>
+			<if test="author != null">
+				where author = #{author}
+			</if>
+		</where>
+	</select>
+
+	<!-- 정렬 조건을 사용자가 선택하는 경우 -->
+	<select id="findAllOrder" resultType="BookVO">
+		select * from books
+		<choose>
+			<when test="sort == 'priceDesc'">
+				order by price Asc
+			</when>
+			<when test="sort == 'titleDesc'">
+				order by title Asc
+			</when>
+		</choose>
+	</select>
+
+</mapper>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace : 현재 Mapper XML이 어떤 Java 인터페이스와 연결되는지 지정 -->
+<mapper namespace="com.korea.petclinic.dao.ReservationDAO">
+
+	<!-- FindAll() -->
+	<select id="findAll" resultType="ReservationVO">
+		select * from reservation
+	</select>
+
+	<!-- FindById -->
+	<select id="findById" resultType="ReservationVO">
+		select * from reservation where
+		id = #{id}
+	</select>
+
+	<!-- insert -->
+	<insert id="insert">
+		insert into reservation(petName, ownerName,
+		animalType, doctorName,
+		reservationDate, status, price)
+		values
+		(#{petName}, #{ownerName}, #{animalType}, #{doctorName},
+		#{reservationDate}, #{status}, #{price})
+	</insert>
+
+	<!-- update -->
+	<update id="update">
+		update reservation
+		set
+		petName = #{petName},
+		ownerName =
+		#{ownerName},
+		animalType = #{animalType},
+		doctorName = #{doctorName},
+		reservationDate = #{reservationDate},
+		status = #{status},
+		price =
+		#{price}
+		where id =
+		#{id}
+	</update>
+
+	<!-- delete -->
+	<delete id="delete">
+		delete from reservation where id = #{id}
+	</delete>
+
+	<!-- searchType -->
+	<select id="searchType" resultType="ReservationVO">
+		select * from reservation
+		<where>
+			<choose>
+				<when test="searchType == 'pet'">
+					petName LIKE CONCAT('%', #{keyword}, '%')
+				</when>
+				<when test="searchType == 'owner'">
+					ownerName LIKE CONCAT('%', #{keyword}, '%')
+				</when>
+				<when test="searchType == 'doctor'">
+					doctorName LIKE CONCAT('%', #{keyword}, '%')
+				</when>
+			</choose>
+		</where>
+	</select>
+	
+	<!-- findByOrder -->
+	<select id="findByOrder" resultType="ReservationVO">
+		select  * from reservation
+		<choose>
+		<when test="sort == 'asc'">
+			order by price ASC
+		</when>
+		<when test="sort == 'desc'">
+			order by price DESC
+		</when>
+		</choose>
+	</select>
+
+</mapper>
