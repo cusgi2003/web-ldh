@@ -42,4 +42,13 @@ public class ReservationService {
 	public List<ReservationVO> findByOrder(String sort) {
 		return reservationDAO.findByOrder(sort);
 	}
+
+	public Integer getTotalPrice() {
+		return reservationDAO.getTotalPrice();
+	}
+
+	public Integer getStatusCount() {
+		// TODO Auto-generated method stub
+		return reservationDAO.getStatusCount();
+	}
 }

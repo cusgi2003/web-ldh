@@ -21,4 +21,8 @@ public interface ReservationDAO {
 	List<ReservationVO> searchDetail(String searchType, String keyword);
 
 	List<ReservationVO> findByOrder(String sort);
+
+	Integer getTotalPrice();
+
+	Integer getStatusCount();
 }

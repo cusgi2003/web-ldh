@@ -67,7 +67,7 @@
 		</where>
 	</select>
 	
-	<!-- findByOrder -->
+	<!-- findByOrder -->  
 	<select id="findByOrder" resultType="ReservationVO">
 		select  * from reservation
 		<choose>
@@ -78,6 +78,16 @@
 			order by price DESC
 		</when>
 		</choose>
+	</select>
+	
+	<!-- totalPrice -->
+	<select id="getTotalPrice" resultType="Integer">
+		select sum(price) from reservation
+	</select>
+	
+	<!-- status-count -->
+	<select id="getStatusCount" resultType="StatusCountVO">
+		select status, count(*) from reservation group by status	
 	</select>
 
 </mapper>

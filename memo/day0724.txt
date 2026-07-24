@@ -1,0 +1,12 @@
+400(badRequest) : 요청이 잘못된것 -> 같이 전달하는 데이터에서 잘못된게 없는지 or 의도와 다르게 Java코드가 작성된 경우
+
+404(notFound) : 경로를 찾지 못함 -> 요청주소를 확인
+
+500 : 서버쪽에서 발생한 에러 -> 구조를 점검(controller -> mapper)
+
+프로젝트 생성(의존성 필요한거 다 주입)
+springweb
+lombok
+mybatis
+mysqlconnector
+devtools

@@ -39,7 +39,7 @@ public class ReservationController {
 		return reservationService.insert(vo);
 	}
 	
-	@PutMapping("/{id}")
+	@PutMapping("{id}")
 	public int update(@RequestBody ReservationVO vo) {
 		return reservationService.update(vo);
 	}
@@ -49,17 +49,27 @@ public class ReservationController {
 		return reservationService.delete(id);
 	}
 	
-	@GetMapping("/search-detail")
+	@GetMapping("search-detail")
 	public List<ReservationVO> searchDetail(
 			@RequestParam("searchType") String searchType,
 			@RequestParam("keyword") String keyword){
 		return reservationService.searchDetail(searchType, keyword);
 	}
 	
-	@GetMapping("/sort")
+	@GetMapping("sort")
 	public List<ReservationVO> findByOrder(@RequestParam("sort") String sort){
 		return reservationService.findByOrder(sort);
 	}
 	
+	// 전체 예상 진료비
+	@GetMapping("total-price")
+	public Integer getTotalPrice() {
+		return reservationService.getTotalPrice();
+	}
 	
+	// 예약 상태별 개수 출력
+	@GetMapping("status-count")
+	public Integer getStatusCount() {
+		return reservationService.getStatusCount();
+	}
 }
