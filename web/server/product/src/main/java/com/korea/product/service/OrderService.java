@@ -2,6 +2,7 @@ package com.korea.product.service;
 
 import java.util.List;
 
+import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 import com.korea.product.dao.OrderDAO;
@@ -18,7 +19,7 @@ public class OrderService {
 	private final OrderDAO orderDAO;
 	private final ProductDAO productDAO;
 
-	public String createOrder(OrderVO vo) {
+	public List<OrderVO> createOrder(OrderVO vo) {
 		
 		//1. 주문수량 검사
 		if(vo.getProductCount() < 0) {
@@ -40,7 +41,16 @@ public class OrderService {
 		
 		//5. 주문 등록
 		int orderResult = orderDAO.createOrder(vo);
-		return null;
+		
+		//6. 재고 감소
+		int stockResult = productDAO.decreaseStock(vo.getProductId(), vo.getProductCount());
+		
+		
+		return orderDAO.findAll();
+	}
+
+	public List<OrderVO> findAll() {
+		return orderDAO.findAll();
 	}
 
 }

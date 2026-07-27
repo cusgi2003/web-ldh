@@ -49,7 +49,7 @@ public class ProductController {
 			vo.setProductId(productId);
 			
 			// 성공 시 200 OK와 함께 최신 목록 반환
-			return ResponseEntity.ok().body(productServce.updateProduct(productId));
+			return ResponseEntity.ok().body(productServce.updateProduct(vo));
 			
 		} catch (Exception e) { // 변수명 e로 통일
 			// 실패 시 500 Internal Server Error 또는 400 BadRequest와 함께 에러 메시지 반환

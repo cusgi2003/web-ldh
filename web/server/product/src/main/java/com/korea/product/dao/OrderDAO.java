@@ -1,5 +1,7 @@
 package com.korea.product.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.korea.product.vo.OrderVO;
@@ -8,5 +10,7 @@ import com.korea.product.vo.OrderVO;
 public interface OrderDAO {
 
 	int createOrder(OrderVO vo);
+
+	List<OrderVO> findAll();
 
 }
