@@ -21,12 +21,12 @@
 * 연계 메커니즘 5대 구성 요소 및 미들웨어(연계 서버 및 어댑터)의 기능
 * 데이터 추출 최적화 조건 및 수신 데이터의 운영 DB 반영 4단계 프로세스
 
-### 📑 [04. 인프라 아키텍처 및 기술 스택 (Tech Stack)](./04_architecture_and_tech_stack.md) 🌟 NEW
+### 📑 [04. 인프라 아키텍처 및 기술 스택 (Tech Stack)](./04_architecture_and_tech_stack.md)
 * 실시간 데이터 추출 기법 (`CDC`) 및 데이터 분석 저장소 (`Data Warehouse`)
 * 분산 이벤트 스트리밍 인프라 (`Kafka`, `Pulsar`) 및 데이터 포맷 (`Avro`, `Parquet`)
 * 관제 및 모니터링 환경 (`ELK`, `Grafana`, `AWS CloudWatch`) 및 서비스 품질 (`QoS`)
 
-### 📑 [05. 최신 API 동향 및 표준 프로토콜](./05_latest_trends_and_protocols.md) 🌟 NEW
+### 📑 [05. 최신 API 동향 및 표준 프로토콜](./05_latest_trends_and_protocols.md)
 * 연계 기술 분류 (실시간 API, 메시지 큐, 이벤트 스트리밍, `Pub/Sub`)
 * 웹 API 패러다임 비교 (`REST API` 단점 분석 및 `GraphQL`, `AsyncAPI` 등장 배경)
 * 엔터프라이즈 솔루션 및 보안 인프라 (`API Gateway`, `ISO 20022`, `OAuth2`)
