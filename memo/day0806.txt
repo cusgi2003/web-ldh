@@ -1,0 +1,1 @@
+MC/DC (Modified Condition/Decision Civerage) 변경 조건 결정 커버리지
